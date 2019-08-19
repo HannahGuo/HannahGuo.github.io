@@ -5,18 +5,19 @@
 
 html,
 body {
-    height: 100%;
+    height: 100vh;
     width: 100%;
     font-family: 'Quattrocento Sans', sans-serif;
+    font-size: 1.2vw;
 }
 
 .titleFont {
-    font-size: 36px;
+    font-size: 2.7vw;
     font-weight: bold;
 }
 
 .subtitleFont {
-    font-size: 26px;
+    font-size: 1.8vw;
     font-weight: bold;
 }
 
@@ -28,12 +29,12 @@ body {
 
 #header {
     background-color: #5E77EE;
-    height: 2.5%;
+    height: 2.2vh;
 }
 
 #footer {
     background-color: #5E77EE;
-    height: 2.5%;
+    height: 2.2vh;
 }
 
 #centerDiv {
@@ -52,7 +53,7 @@ body {
 }
 
 #padme {
-    padding: 80px 50px 0px;
+    padding: 12vh 4vw 0vw;
 }
 
 #pfp {
@@ -63,7 +64,7 @@ body {
     position: relative;
     top: 50%;
     transform: translateY(-50%);
-    width: 450px;
+    width: 33vw;
     height: auto;
 }
 
@@ -72,16 +73,31 @@ body {
 }
 
 #mainName {
-    border-bottom: 4px solid #5E77EE;
+    border-bottom: 0.4vw solid #5E77EE;
 }
 
 table {
     text-align: center;
+    height: 5vh;
+    width: 5vw;
+    table-layout: auto;
+    border-spacing: 0;
+}
+
+th {
+    height: 5vh;
+    width: 5vw;
 }
 
 th,
 td {
-    padding-left: 50px;
+    padding: 0;
+    padding-left: 4.8vw;
+}
+
+td > a > img {
+    width: 2vw;
+    height: auto;
 }
 
 a {
