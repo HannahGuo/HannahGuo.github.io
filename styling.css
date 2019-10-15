@@ -47,6 +47,58 @@ body {
     height: 100%;
 }
 
+#PFPDiv {
+    display: flex;
+    flex-direction: column;
+    height: inherit;
+    justify-content: center;
+    vertical-align: middle;
+}
+
+#PFPContainer {
+    margin: 0 auto;
+    background-image: url("PFP.jpg");
+    position: relative;
+    border-radius: 50%;
+    width: 33vw;
+    height: 33vw;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+}
+
+#PFPOverlay {
+    position: absolute;
+    width: 33vw;
+    margin: 0 auto;
+    margin-left: 8.5vw;
+    height: 33vw;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    background: rgba(0, 0, 0, 0.0);
+    opacity: 0;
+}
+
+#PFPOverlay:hover {
+    opacity: 1;
+    background: rgba(0, 0, 0, 0.5);
+    transition: .3s ease-in-out;
+    cursor: pointer;
+}
+
+#PFPOverlay>span>a {
+    text-decoration: none;
+    color: lightblue;
+}
+
+#PFPOverlay>span>a:hover {
+    text-decoration: underline;
+}
+
 #right {
     flex-grow: 1;
     height: 100%;
@@ -54,18 +106,6 @@ body {
 
 #padme {
     padding: 12vh 4vw 0vw;
-}
-
-#pfp {
-    border-radius: 50%;
-    display: block;
-    margin: 0 auto;
-    object-fit: contain;
-    position: relative;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 33vw;
-    height: auto;
 }
 
 .mainText {
@@ -95,12 +135,12 @@ td {
     padding-left: 4.8vw;
 }
 
-td > a > img {
+td>a>img {
     width: 2vw;
     height: auto;
 }
 
-a {
+td>a {
     text-decoration: none;
     font-weight: bold;
     color: #5E77EE;
