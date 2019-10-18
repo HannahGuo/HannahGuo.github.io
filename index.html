@@ -8,13 +8,14 @@
 <head>
     <title>Hannah Guo</title>
     <link rel="stylesheet" type="text/css" href="styling.css">
+    <script src="https://use.fontawesome.com/d4adba3734.js?SameSite=None"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <link href="https://fonts.googleapis.com/css?family=Quattrocento+Sans&display=swap" rel="stylesheet">
-
 </head>
 
 <body>
     <div id="all">
-        <div id="header"></div>
+        <div id="header" class="highlightColour"></div>
         <div id="centerDiv">
             <div id="left">
                 <div id="PFPDiv">
@@ -55,10 +56,53 @@
                         </tr>
                     </table>
                 </div>
+                <div id="themeSwitcher">
+                    <div id="currentTheme">
+                        <div id="currentThemeIcon"><i class="fa fa-cloud" aria-hidden="true"></i></div>
+                        Switch Theme
+                    </div>
+                    <div id="themeExpand">
+                        <div onclick="switchTheme('sky')" id="skyTheme" class="themeOptions"><i class="fa fa-cloud"
+                                aria-hidden="true"></i>
+                        </div>
+                        <div onclick="switchTheme('night')" id="nightTheme" class="themeOptions"><i class="fa fa-moon-o"
+                                aria-hidden="true"></i></div>
+                        <div onclick="switchTheme('natural')" id="naturalTheme" class="themeOptions"><i
+                                class="fa fa-pagelines" aria-hidden="true"></i>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
-        <div id="footer"></div>
+        <div id="footer" class="highlightColour"></div>
     </div>
 </body>
+<script>
+    $("#themeExpand").hide();
+    $('#themeSwitcher').click(function () {
+        $('#themeExpand').animate({
+            width: 'toggle',
+        }, 300);
+    });
+
+    function switchTheme(themeID) {
+        switch (themeID) {
+            case "night":
+                document.documentElement.setAttribute('data-theme', 'nightTheme');
+                document.getElementById("currentThemeIcon").innerHTML =
+                    '<i class="fa fa-moon-o" aria-hidden="true"></i>';
+                break;
+            case "natural":
+                document.documentElement.setAttribute('data-theme', 'naturalTheme');
+                document.getElementById("currentThemeIcon").innerHTML =
+                '<i class="fa fa-pagelines" aria-hidden="true">';
+                break;
+            default:
+                document.documentElement.setAttribute('data-theme', 'skyTheme');
+                document.getElementById("currentThemeIcon").innerHTML = '<i class="fa fa-cloud" aria-hidden="true">';
+                break;
+        }
+    }
+</script>
 
 </html>
