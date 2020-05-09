@@ -24,6 +24,7 @@
 [data-theme="nightTheme"] {
     --backgroundColor: black;
     --textColor: lightgrey;
+    --texthover: lightgrey;
     --highlightColor: #4d60bf;
     --iconFilter: invert(90%);
 }
@@ -273,21 +274,16 @@ body {
     color: darkgray;
 }
 
-#naturalTheme:hover {
-    color: green;
-}
-
 #currentThemeIcon {
     display: inline-block;
 }
 
 .detailsLink {
     cursor: pointer;
-    color: black;
 }
 
 .detailsLink:hover {
-    color: darkslategrey;
+    color: slategray;
 }
 
 #detailsWindow {
@@ -301,6 +297,7 @@ body {
 
 #detailsWindowCenter {
     display: none;
+    color: black;
     position: absolute;
     background-color: #f7f7f7;
     width: 60%;
@@ -330,7 +327,7 @@ body {
     cursor: pointer;
 }
 
-#detailsWindowClose:hover{
+#detailsWindowClose:hover {
     background-color: darkred;
 }
 
@@ -362,4 +359,20 @@ body {
     display: block;
     margin: auto;
     cursor: pointer;
+}
+
+#clickIcon {
+    height: 1.3vw;
+}
+
+#robotCodeTable {
+    width: 90%;
+    border-collapse: collapse;
+    margin: 0 auto;
+    table-layout: fixed;
+    text-align: center;
+}
+
+#robotCodeTable>tbody>tr>td {
+    padding: 0.8vw;
 }

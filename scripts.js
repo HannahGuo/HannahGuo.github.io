@@ -5,8 +5,37 @@ $('#themeSwitcher').click(function () {
     }, 300);
 });
 
+$("#robotCodeLink").click(function () {
+    let robotCodeDetails = `<span class="titleFont">Robot Code 🤖</span>
+    <br><br>
+    <table id="robotCodeTable">
+        <tr>
+            <td>
+                <iframe width="380" height="280" src="https://www.youtube.com/embed/nlQ2LHgbIDY"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe>
+            <td rowspan="2">
+                I've spent the past four years as a programmer in FIRST Robotics Team 1325. From junior to
+                lead programmer, I use <a target="_blank" href="https://docs.wpilib.org/en/stable/">FRC's
+                    WPILIB libraries </a>to seamlessly connect robot sensors and motors
+                to driver controls.
+                <br><br>
+                <b>Programmed in:</b> Java.
+                <br><br>
+                <a target="_blank" href="https://github.com/HannahGuo/2019RobotShow">2019 Code Repository
+                    Link</a>
+            </td>
+        </tr>
+        <tr>
+            <td><em>Our team's 2019 robot reveal (with controls!)</em></td>
+        </tr>
+    </table>`;
+    $("#detailsfillMe").html(robotCodeDetails);
+});
+
 $("#webDevLink").click(function () {
-    let webDevDetails = `<span class="titleFont">Website Design/Development</span>
+    let webDevDetails = `<span class="titleFont">Website Design/Development 🌐</span>
     <br><br>
     <span>I love designing and developing websites for various subjects. I built the website you're looking
         at
