@@ -16,6 +16,12 @@
 <body>
     <div id="all">
         <div id="header" class="highlightColour"></div>
+        <div id="detailsWindow"></div>
+        <div id="detailsWindowCenter">
+            <div id="detailsWindowClose">x</div>
+            <span id="detailsfillMe">
+            </span>
+        </div>
         <div id="centerDiv">
             <div id="left">
                 <div id="PFPDiv">
@@ -29,7 +35,8 @@
                     <span id="mainName" class="titleFont">Hannah Guo</span><span class="titleFont">✌️</span>
                     <br><br>
                     <span class="mainText">
-                        <em><strong>Website Design/Development. Robot Code. Capture the Flag.</strong>
+                        <em><strong><span class="detailsLink" id="webDevLink">Website Design/Development.</span>
+                                Robot Code. Capture the Flag.</strong>
                             <br> Blogging, Skating, Jigsaw Puzzles, Cryptograms, Geocaching, Photography.</em>
                         <br><br> Basically, if it looks neat, I'll try it. There's nothing I love more than
                         <br> exploring something new.
@@ -38,18 +45,20 @@
                         <br><br>
                     </span>
                     <span class="subtitleFont">My Links:</span><br><br>
-                    <table>
+                    <table id="tableLinks">
                         <tr>
                             <td>
-                                <a href="https://github.com/HannahGuo"><img src="icons/GitHub-Mark-32px.png" />
+                                <a target="_blank" href="https://github.com/HannahGuo"><img
+                                        src="icons/GitHub-Mark-32px.png" />
                                     <br><span>Github</span></a>
                             </td>
                             <td>
-                                <a href="https://devpost.com/HannahGuo"><img src="icons/icons8-dev-post-32.png" />
+                                <a target="_blank" href="https://devpost.com/HannahGuo"><img
+                                        src="icons/icons8-dev-post-32.png" />
                                     <br><span>Devpost</span></a>
                             </td>
                             <td>
-                                <a href="https://www.linkedin.com/in/hannah-guo-231313164/"><img
+                                <a target="_blank" href="https://www.linkedin.com/in/hannah-guo-231313164/"><img
                                         src="icons/icons8-linkedin-32.png" />
                                     <br><span>LinkedIn</span></a>
                             </td>
@@ -67,9 +76,6 @@
                         </div>
                         <div onclick="switchTheme('night')" id="nightTheme" class="themeOptions"><i class="fa fa-moon-o"
                                 aria-hidden="true"></i></div>
-                        <div onclick="switchTheme('natural')" id="naturalTheme" class="themeOptions"><i
-                                class="fa fa-pagelines" aria-hidden="true"></i>
-                        </div>
                     </div>
                 </div>
             </div>
@@ -77,32 +83,6 @@
         <div id="footer" class="highlightColour"></div>
     </div>
 </body>
-<script>
-    $("#themeExpand").hide();
-    $('#themeSwitcher').click(function () {
-        $('#themeExpand').animate({
-            width: 'toggle',
-        }, 300);
-    });
-
-    function switchTheme(themeID) {
-        switch (themeID) {
-            case "night":
-                document.documentElement.setAttribute('data-theme', 'nightTheme');
-                document.getElementById("currentThemeIcon").innerHTML =
-                    '<i class="fa fa-moon-o" aria-hidden="true"></i>';
-                break;
-            case "natural":
-                document.documentElement.setAttribute('data-theme', 'naturalTheme');
-                document.getElementById("currentThemeIcon").innerHTML =
-                '<i class="fa fa-pagelines" aria-hidden="true">';
-                break;
-            default:
-                document.documentElement.setAttribute('data-theme', 'skyTheme');
-                document.getElementById("currentThemeIcon").innerHTML = '<i class="fa fa-cloud" aria-hidden="true">';
-                break;
-        }
-    }
-</script>
+<script src="scripts.js"></script>
 
 </html>
