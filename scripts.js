@@ -5,6 +5,37 @@ $('#themeSwitcher').click(function () {
     }, 300);
 });
 
+$("#programmingContestsLink").click(function () {
+    let programmingContestsDetails = `<span class="titleFont">Programming Contests 🏅</span>
+    <br><br>
+    <span>Apart from hackathons, I enjoy testing my programming skills in various contests.</span>
+    <br><br>
+    <table id="programmingContestsTable">
+        <tr>
+            <td><a target="_blank" href="https://codein.withgoogle.com/#winners"><img class="webSS"
+                        src="images/googleCodeIn.png"></a>
+            </td>
+            <td><a target="_blank" href="https://picoctf.com/"><img class="webSS"
+                        src="images/pico-ctf-logo-4-c.svg"></a>
+            </td>
+            <td>PLACEHOLDER</td>
+        </tr>
+        <tr>
+            <td>I placed as a Runner-up during the open source code Google Code-In 2019 challenge for the
+                Terasology Foundation.</td>
+            <td>I competed in the cybersecurity capture the flag picoCTF contest in both 2018 and 2019. I
+                placed top 10 nationally both times.</td>
+            <td>PLACEHOLDER</td>
+        </tr>
+        <tr>
+            <td><b>Languages used:</b> Java</td>
+            <td><b>Skills Used: </b>Cryptography, Steganography, Web/Binary Exploitation</td>
+            <td><b>Built with:</b> PLACEHOLDER</td>
+        </tr>
+    </table>`;
+    $("#detailsfillMe").html(programmingContestsDetails);
+});
+
 $("#robotCodeLink").click(function () {
     let robotCodeDetails = `<span class="titleFont">Robot Code 🤖</span>
     <br><br>
