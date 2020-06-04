@@ -66,7 +66,7 @@ $("#robotCodeLink").click(function () {
 });
 
 $("#webDevLink").click(function () {
-    let webDevDetails = `<span class="titleFont">Website Design/Development 🌐</span>
+    let webDevDetails = `<span class="titleFont">Web Design/Development 🌐</span>
     <br><br>
     <span>I love designing and developing websites for various subjects. I built the website you're looking
         at

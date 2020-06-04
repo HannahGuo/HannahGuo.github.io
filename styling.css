@@ -6,7 +6,9 @@
 :root {
     --backgroundColor: #ffffff;
     --highlightColor: #5E77EE;
+    --lightHighlightColor: #bec8f8;
     --textColor: black;
+    --textHover: black;
     --iconFilter: brightness(1);
 }
 
@@ -19,14 +21,17 @@
     --highlightColor: #5E77EE;
     --textColor: black;
     --iconFilter: invert(0%);
+    --themeSwitcher: #f7f7f7;
 }
 
 [data-theme="nightTheme"] {
     --backgroundColor: black;
     --textColor: lightgrey;
-    --texthover: lightgrey;
+    --textHover: white;
     --highlightColor: #4d60bf;
+    --lightHighlightColor: #192042;
     --iconFilter: invert(90%);
+    --themeSwitcher: #192042;
 }
 
 html,
@@ -34,18 +39,18 @@ body {
     height: 100vh;
     width: 100%;
     font-family: 'Quattrocento Sans', sans-serif;
-    font-size: 1.2vw;
+    font-size: 1.05em;
     background-color: var(--backgroundColor);
     color: var(--textColor);
 }
 
 .titleFont {
-    font-size: 2.7vw;
+    font-size: 2.3em;
     font-weight: bold;
 }
 
 .subtitleFont {
-    font-size: 1.8vw;
+    font-size: 1.2em;
     font-weight: bold;
 }
 
@@ -56,11 +61,11 @@ body {
 }
 
 #header {
-    height: 2.2vh;
+    height: 0.8em;
 }
 
 #footer {
-    height: 2.2vh;
+    height: 0.8em;
 }
 
 #centerDiv {
@@ -135,8 +140,8 @@ body {
     background-image: url("images/PFP.jpg");
     position: relative;
     border-radius: 50%;
-    width: 33vw;
-    height: 33vw;
+    width: 28em;
+    height: 28em;
     background-size: cover;
     background-repeat: no-repeat;
     background-position: 50% 50%;
@@ -144,10 +149,10 @@ body {
 
 #PFPOverlay {
     position: absolute;
-    width: 33vw;
+    width: 28em;
+    height: 28em;
     margin: 0 auto;
-    margin-left: 8.5vw;
-    height: 33vw;
+    margin-left: 7.8em;
     border-radius: 50%;
     display: flex;
     justify-content: center;
@@ -180,7 +185,11 @@ body {
 }
 
 #padme {
-    padding: 12vh 4vw 0vw;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    margin: 0;
+    position: absolute;
+    top: 50%;
 }
 
 .mainText {
@@ -188,30 +197,30 @@ body {
 }
 
 #mainName {
-    border-bottom: 0.4vw solid var(--highlightColor);
+    border-bottom: 0.13em solid var(--highlightColor);
 }
 
 #tableLinks {
     text-align: center;
-    height: 5vh;
-    width: 5vw;
+    height: 3em;
+    width: 3em;
     table-layout: auto;
     border-spacing: 0;
 }
 
 #tableLinks>th {
-    height: 5vh;
-    width: 5vw;
+    height: 3em;
+    width: 3em;
 }
 
 #tableLinks>th,
 #tableLinks>tbody>tr>td {
     padding: 0;
-    padding-left: 4.8vw;
+    padding-left: 2.8em;
 }
 
 #tableLinks>tbody>tr>td>a>img {
-    width: 2vw;
+    width: 1.6em;
     height: auto;
     filter: var(--iconFilter);
 }
@@ -227,10 +236,11 @@ body {
 }
 
 #themeSwitcher {
-    margin-top: 12vh;
-    margin-right: 2vw;
+    margin-top: 36em;
+    height: auto;
+    margin-right: 2em;
     float: right;
-    padding: 0.5vw;
+    padding: 0.4em;
     display: flex;
     flex-direction: row-reverse;
 }
@@ -241,8 +251,8 @@ body {
 }
 
 #themeExpand>div {
-    width: 3vw;
-    padding: 0.3vw;
+    width: 2.5em;
+    padding: 0.2em;
 }
 
 .themeOptions:hover {
@@ -251,10 +261,10 @@ body {
 }
 
 #currentTheme {
-    background-color: #f7f7f7;
-    color: black;
-    padding: 0.3vw;
-    border-radius: 5%;
+    background-color: var(--themeSwitcher);
+    color: var(--textColor);
+    padding: 0.28em;
+    border-radius: 0.4em;
 }
 
 #currentTheme:hover {
@@ -279,12 +289,17 @@ body {
 }
 
 .detailsLink {
+    border-radius: 0.2em;
+    padding: 0.3em;
+    background-color: var(--lightHighlightColor);
+    color: var(--highlightColor);
     cursor: pointer;
 }
 
 .detailsLink:hover {
-    color: slategray;
+    color: var(--textHover);
 }
+
 
 #detailsWindow {
     width: 100%;
@@ -361,10 +376,6 @@ body {
     cursor: pointer;
 }
 
-#clickIcon {
-    height: 1.3vw;
-}
-
 #robotCodeTable {
     width: 90%;
     border-collapse: collapse;
@@ -398,4 +409,8 @@ body {
 
 #programmingContestsTable>tbody>tr>td>a:hover {
     font-weight: bold;
+}
+
+.spacer {
+    height: 0.8em;
 }
