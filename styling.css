@@ -54,23 +54,199 @@ body {
     font-weight: bold;
 }
 
-#all {
-    display: flex;
-    flex-flow: column;
-    height: 100%;
+@media screen and (max-width:600px) {
+
+    /* CSS for screens that are 600 pixels or less will be put in this section */
+    #all {
+        display: flex;
+        flex-flow: column;
+    }
+
+    #centerDiv {
+        display: flex;
+        flex-direction: column;
+        margin: 0 auto;
+        flex-grow: 1;
+        align-items: center;
+        margin-top: 2em;
+        width: 100%;
+    }
+
+    #PFPDiv {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: fit-content;
+        margin: inherit;
+    }
+
+    #PFPContainer {
+        display: block;
+        margin: 0 auto;
+        background-image: url("images/PFP.jpg");
+        border-radius: 50%;
+        width: 15em;
+        height: 15em;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: 50% 50%;
+    }
+
+    #PFPOverlay {
+        border-radius: 50%;
+        display: flex;
+        margin-top: 1em;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        background: rgba(0, 0, 0, 0.0);
+        opacity: 1;
+    }
+
+    #themeSwitcher {
+        margin-top: 1em;
+        height: auto;
+        padding: 0.4em;
+        display: flex;
+        flex-direction: row-reverse;
+    }
+
+    #padme {
+        text-align: center;
+        padding: 1em;
+    }
+
+    #left {
+        /* None */
+    }
+
+    #right {
+        /* None */
+    }
+
+    #header {
+        height: 0.8em;
+    }
+
+    #footer {
+        height: 0.8em;
+    }
+
+    .detailsLink {
+        border-radius: 0.2em;
+        padding: 0.3em;
+        background-color: var(--lightHighlightColor);
+        color: var(--highlightColor);
+        font-size: 0.95em;
+        cursor: pointer;
+
+    }
 }
 
-#header {
-    height: 0.8em;
-}
+@media screen and (min-width:601px) {
+    #all {
+        display: flex;
+        flex-flow: column;
+        height: 100%;
+    }
 
-#footer {
-    height: 0.8em;
-}
+    #centerDiv {
+        display: flex;
+        flex-grow: 1;
+        width: 100%;
+    }
 
-#centerDiv {
-    display: flex;
-    flex-grow: 1;
+    #PFPDiv {
+        display: flex;
+        flex-direction: column;
+        height: inherit;
+        justify-content: center;
+        vertical-align: middle;
+    }
+
+    #PFPContainer {
+        margin: 0 auto;
+        background-image: url("images/PFP.jpg");
+        position: relative;
+        border-radius: 50%;
+        width: 28em;
+        height: 28em;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: 50% 50%;
+    }
+
+    #PFPOverlay {
+        position: absolute;
+        width: 28em;
+        height: 28em;
+        margin: 0 auto;
+        margin-left: 7.8em;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        color: white;
+        background: rgba(0, 0, 0, 0.0);
+        opacity: 0;
+    }
+
+
+    #themeSwitcher {
+        margin-top: 36em;
+        height: auto;
+        margin-right: 2em;
+        float: right;
+        padding: 0.4em;
+        display: flex;
+        flex-direction: row-reverse;
+    }
+
+    #padme {
+        -ms-transform: translateY(-50%);
+        transform: translateY(-50%);
+        margin: 0;
+        position: absolute;
+        top: 50%;
+    }
+
+    #left {
+        width: 50%;
+        height: 100%;
+    }
+
+    #header {
+        height: 0.8em;
+        width: 100%;
+        top: 0;
+        position: relative;
+    }
+
+    #footer {
+        height: 0.8em;
+        width: 100%;
+        bottom: 0;
+        position: relative;
+    }
+
+    .detailsLink {
+        border-radius: 0.2em;
+        padding: 0.3em;
+        background-color: var(--lightHighlightColor);
+        color: var(--highlightColor);
+        cursor: pointer;
+    }
+
+    #detailsWindow {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        background-color: black;
+        z-index: -1;
+        opacity: 0;
+    }
+
 }
 
 #centerDiv>div {
@@ -122,47 +298,6 @@ body {
     }
 }
 
-#left {
-    width: 50%;
-    height: 100%;
-}
-
-#PFPDiv {
-    display: flex;
-    flex-direction: column;
-    height: inherit;
-    justify-content: center;
-    vertical-align: middle;
-}
-
-#PFPContainer {
-    margin: 0 auto;
-    background-image: url("images/PFP.jpg");
-    position: relative;
-    border-radius: 50%;
-    width: 28em;
-    height: 28em;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: 50% 50%;
-}
-
-#PFPOverlay {
-    position: absolute;
-    width: 28em;
-    height: 28em;
-    margin: 0 auto;
-    margin-left: 7.8em;
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    color: white;
-    background: rgba(0, 0, 0, 0.0);
-    opacity: 0;
-}
-
 #PFPOverlay:hover {
     opacity: 1;
     background: rgba(0, 0, 0, 0.5);
@@ -182,14 +317,6 @@ body {
 #right {
     flex-grow: 1;
     height: 100%;
-}
-
-#padme {
-    -ms-transform: translateY(-50%);
-    transform: translateY(-50%);
-    margin: 0;
-    position: absolute;
-    top: 50%;
 }
 
 .mainText {
@@ -235,16 +362,6 @@ body {
     text-decoration: underline;
 }
 
-#themeSwitcher {
-    margin-top: 36em;
-    height: auto;
-    margin-right: 2em;
-    float: right;
-    padding: 0.4em;
-    display: flex;
-    flex-direction: row-reverse;
-}
-
 #themeExpand {
     display: flex;
     flex-direction: row-reverse;
@@ -288,26 +405,8 @@ body {
     display: inline-block;
 }
 
-.detailsLink {
-    border-radius: 0.2em;
-    padding: 0.3em;
-    background-color: var(--lightHighlightColor);
-    color: var(--highlightColor);
-    cursor: pointer;
-}
-
 .detailsLink:hover {
     color: var(--textHover);
-}
-
-
-#detailsWindow {
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    background-color: black;
-    z-index: -1;
-    opacity: 0;
 }
 
 #detailsWindowCenter {
