@@ -36,17 +36,12 @@
 
 html,
 body {
-    height: 100vh;
+    height: 100%;
     width: 100%;
     font-family: 'Quattrocento Sans', sans-serif;
     font-size: 1.05em;
     background-color: var(--backgroundColor);
     color: var(--textColor);
-}
-
-.titleFont {
-    font-size: 2.3em;
-    font-weight: bold;
 }
 
 .subtitleFont {
@@ -139,11 +134,102 @@ body {
         color: var(--highlightColor);
         font-size: 0.95em;
         cursor: pointer;
+    }
 
+    #padMe>.titleFont {
+        font-size: 2.3em;
+        font-weight: bold;
+    }
+
+    .titleFont {
+        font-size: 1.1em;
+        font-weight: bold;
+    }
+
+    #detailsWindowCenter {
+        display: none;
+        position: absolute;
+        height: 150vh;
+        background-color: #f7f7f7;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        opacity: 0;
+        padding: 2em;
+    }
+
+    #detailsWindowClose {
+        display: table-cell;
+        vertical-align: middle;
+        width: 1em;
+        font-size: 1em;
+        height: 1em;
+        padding: 0.15em;
+        color: white;
+        background-color: firebrick;
+        position: absolute;
+        text-align: center;
+        left: 90%;
+        cursor: pointer;
+        border-radius: 0.2em;
+    }
+
+    #webDevTable,
+    #programmingContestsTable {
+        width: 95%;
+        display: block;
+        overflow: auto;
+        flex-direction: column;
+        align-content: center;
+        font-size: 1em;
+        text-align: center;
+    }
+
+    #webDevTable>div:nth-child(n),
+    #programmingContestsTable>div:nth-child(n) {
+        border-bottom: 0.2em solid lightgray;
+        padding-top: 0.4em;
+        padding-bottom: 1em;
+    }
+
+    #webDevTable>div>div,
+    #programmingContestsTable>div>div {
+        margin-top: 1.5em;
+    }
+
+    .webSS {
+        height: 8em;
+        display: block;
+        margin: auto;
+        cursor: pointer;
+    }
+
+    #robotCodeTable {
+        width: 90%;
+        margin: 0 auto;
+        text-align: center;
+        display: block;
+    }
+
+    #robotCodeTable>div {
+        display: block;
+        margin-bottom: 1em;
+    }
+
+    iframe {
+        width: 18em;
+        height: 12em;
+        margin-bottom: 1em;
     }
 }
 
 @media screen and (min-width:601px) {
+    .titleFont {
+        font-size: 2.3em;
+        font-weight: bold;
+    }
+
     #all {
         display: flex;
         flex-flow: column;
@@ -247,6 +333,90 @@ body {
         opacity: 0;
     }
 
+    #detailsWindowCenter {
+        display: none;
+        color: black;
+        position: absolute;
+        background-color: #f7f7f7;
+        width: 60%;
+        height: 60%;
+        margin: auto;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        opacity: 0;
+        padding: 2em;
+        border-radius: 0.8em;
+    }
+
+    #detailsWindowClose {
+        display: table-cell;
+        vertical-align: middle;
+        width: 1.2em;
+        font-size: 1.2em;
+        height: 1.2em;
+        padding: 0.1em;
+        color: white;
+        background-color: firebrick;
+        position: absolute;
+        text-align: center;
+        left: 93%;
+        cursor: pointer;
+        border-radius: 0.2em;
+    }
+
+
+    #webDevTable,
+    #programmingContestsTable {
+        flex: 1 1 0;
+        width: 95%;
+        display: flex;
+        align-content: center;
+        font-size: 0.88em;
+        text-align: center;
+    }
+
+    #webDevTable>div,
+    #programmingContestsTable>div {
+        flex-basis: 100%;
+    }
+
+    #webDevTable>div>div,
+    #programmingContestsTable>div>div {
+        margin-top: 1.5em;
+    }
+
+    .webSS {
+        height: 6em;
+        display: block;
+        margin: auto;
+        cursor: pointer;
+    }
+
+    #robotCodeTable {
+        width: 90%;
+        margin: 0 auto;
+        text-align: center;
+        display: table;
+        font-size: 0.9em;
+    }
+
+    #robotCodeTable>div {
+        padding: 1em;
+        vertical-align: middle;
+        display: table-cell;
+    }
+
+    #robotCodeTable>div>iframe {
+        margin-bottom: 1em;
+    }
+
+
+    iframe {
+        width: 28em;
+        height: 18em;
+    }
 }
 
 #centerDiv>div {
@@ -409,106 +579,8 @@ body {
     color: var(--textHover);
 }
 
-#detailsWindowCenter {
-    display: none;
-    color: black;
-    position: absolute;
-    background-color: #f7f7f7;
-    width: 60%;
-    height: 60%;
-    margin: auto;
-    left: 0;
-    right: 0;
-    top: 0;
-    bottom: 0;
-    opacity: 0;
-    padding: 2.5vw;
-    border-radius: 0.8em;
-}
-
-#detailsWindowClose {
-    display: table-cell;
-    vertical-align: middle;
-    width: 1.5vw;
-    font-size: 1.5vw;
-    height: 1.5vw;
-    padding: 0.3vw;
-    color: white;
-    background-color: firebrick;
-    position: absolute;
-    text-align: center;
-    left: 93%;
-    cursor: pointer;
-    border-radius: 0.2em;
-}
-
 #detailsWindowClose:hover {
     background-color: darkred;
-}
-
-#webDevTable {
-    width: 95%;
-    table-layout: fixed;
-    text-align: center;
-    font-size: 1vw;
-    border-collapse: collapse;
-    margin: auto;
-}
-
-#webDevTable>tbody>tr>td {
-    border-left: 0.1vw solid white;
-    border-right: 0.1vw solid white;
-    padding: 0.8vw;
-}
-
-#webDevTable>tbody>tr>td>a {
-    text-decoration: none;
-}
-
-#webDevTable>tbody>tr>td>a:hover {
-    font-weight: bold;
-}
-
-.webSS {
-    height: 8vw;
-    display: block;
-    margin: auto;
-    cursor: pointer;
-}
-
-#robotCodeTable {
-    width: 90%;
-    border-collapse: collapse;
-    margin: 0 auto;
-    table-layout: fixed;
-    text-align: center;
-}
-
-#robotCodeTable>tbody>tr>td {
-    padding: 0.8vw;
-}
-
-#programmingContestsTable {
-    width: 95%;
-    table-layout: fixed;
-    text-align: center;
-    font-size: 1vw;
-    border-collapse: collapse;
-    margin: auto;
-}
-
-#programmingContestsTable>tbody>tr>td {
-    border-left: 0.1vw solid white;
-    border-right: 0.1vw solid white;
-    padding: 0.8vw;
-}
-
-#programmingContestsTable>tbody>tr>td>a {
-    text-decoration: none;
-}
-
-#programmingContestsTable>tbody>tr>td>a:hover {
-    font-weight: bold;
 }
 
 .spacer {
