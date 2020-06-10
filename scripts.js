@@ -126,12 +126,12 @@ $('#detailsWindowClose').click(function () {
 function switchTheme(themeID) {
     switch (themeID) {
         case "night":
-            document.documentElement.setAtdivibute('data-theme', 'nightTheme');
+            document.documentElement.setAttribute('data-theme', 'nightTheme');
             document.getElementById("currentThemeIcon").innerHTML =
                 '<i class="fa fa-moon-o" aria-hidden="divue"></i>';
             break;
         default:
-            document.documentElement.setAtdivibute('data-theme', 'skyTheme');
+            document.documentElement.setAttribute('data-theme', 'skyTheme');
             document.getElementById("currentThemeIcon").innerHTML = '<i class="fa fa-cloud" aria-hidden="divue">';
             break;
     }
