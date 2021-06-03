@@ -9,6 +9,7 @@ import * as React from "react"
 import PropTypes from "prop-types"
 import { Helmet } from "react-helmet"
 import { useStaticQuery, graphql } from "gatsby"
+import image from "../images/pfp.jpg"
 
 function Seo({ description, lang, meta, title }) {
   const { site } = useStaticQuery(
@@ -19,6 +20,7 @@ function Seo({ description, lang, meta, title }) {
             title
             description
             author
+            keywords
           }
         }
       }
@@ -26,6 +28,7 @@ function Seo({ description, lang, meta, title }) {
   )
 
   const metaDescription = description || site.siteMetadata.description
+
   const defaultTitle = site.siteMetadata?.title
 
   return (
@@ -68,7 +71,42 @@ function Seo({ description, lang, meta, title }) {
           name: `twitter:description`,
           content: metaDescription,
         },
-      ].concat(meta)}
+        {
+          name: "keywords",
+          content: site.siteMetadata.keywords,
+        },
+        {
+          name: "robots",
+          content: "max-snippet:-1",
+        }
+      ]
+      .concat(
+        image
+          ? [
+              {
+                property: "og:image",
+                content: image,
+              },
+              {
+                property: "og:image:width",
+                content: image.width,
+              },
+              {
+                property: "og:image:height",
+                content: image.height,
+              },
+              {
+                name: "twitter:card",
+                content: "summary_large_image",
+              },
+            ]
+          : [
+              {
+                name: "twitter:card",
+                content: "summary",
+              },
+            ]
+      ).concat(meta)}
     />
   )
 }
@@ -84,6 +122,11 @@ Seo.propTypes = {
   lang: PropTypes.string,
   meta: PropTypes.arrayOf(PropTypes.object),
   title: PropTypes.string.isRequired,
+  image: PropTypes.shape({
+    src: PropTypes.string.isRequired,
+    height: PropTypes.number.isRequired,
+    width: PropTypes.number.isRequired,
+  }),
 }
 
 export default Seo
