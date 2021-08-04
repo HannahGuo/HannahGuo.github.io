@@ -85,6 +85,19 @@ const expObj = [
                 "dotColor": "orange",
                 "content": [
                     "This site!",
+                    "Ranked Records - Spotify Rankings",
+                ]
+            },
+        ]
+    },
+    {
+        "skill": "Redux",
+        "type": "web-development",
+        "experiences" : [
+            {
+                "dotColor": "red",
+                "content": [
+                    "Full-stack Developer @ WFHomie Inc.",
                 ]
             },
         ]
@@ -110,6 +123,18 @@ const expObj = [
                 "content": [
                     "Ranked Records - Spotify Rankings",
                     "Snappans - Discord Bot"
+                ]
+            }
+        ]
+    },
+    {
+        "skill": "Express",
+        "type": "web-development",
+        "experiences" : [
+            {
+                "dotColor": "orange",
+                "content": [
+                    "Ranked Records - Spotify Rankings",
                 ]
             }
         ]

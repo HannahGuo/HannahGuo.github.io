@@ -73,7 +73,7 @@ const scrumptiousRollImage = <StaticImage src="../images/scrumptiousroll.jpg" al
                                           placeholder="blurred" layout="constrained" width="8em"/>;
 const arrowbicsImage = <StaticImage src="../images/arrowbics.png" alt="arrowbics-screenshot" 
                                     placeholder="blurred" layout="constrained" width="8em"/>;
-const vitalsImage = <StaticImage src="../images/Vitals.png" alt="vitals-screenshot" placeholder="blurred"
+const rankedRecordsImage = <StaticImage src="../images/rankedrecords.png" alt="ranked-records-screenshot" placeholder="blurred"
                                  layout="constrained" width="8em"/>;
 
 const BoxCard = ({boxTheme}) => {
@@ -120,8 +120,10 @@ const BoxCard = ({boxTheme}) => {
                     <li key={"HTML/CSS"}> HTML/CSS {generateExpDots("HTML/CSS")} </li>
                     <li key={"JavaScript/jQuery"}> JavaScript/jQuery {generateExpDots("JavaScript/jQuery")}</li>
                     <li key={"React"}> React {generateExpDots("React")} </li>
+                    <li key={"Redux"}> Redux {generateExpDots("Redux")} </li>
                     <li key={"Angular"}> Angular {generateExpDots("Angular")} </li>
                     <li key={"Node.js"}> Node.js {generateExpDots("Node.js")} </li>
+                    <li key={"Express"}> Express {generateExpDots("Express")} </li>
                     <li key={"Gatsby"}> Gatsby {generateExpDots("Gatsby")} </li>
                   </ul>
               </div>
@@ -168,11 +170,27 @@ const BoxCard = ({boxTheme}) => {
               of <span role="img" aria-label="smile">🙂</span>
             </div>
             <div className="gridRow">
+              <div className="projectCard">
+                  {rankedRecordsImage}
+                  <h4>Ranked Records</h4>
+                  <h5>
+                    <OutboundLink href="https://hannahguo.me/RankedRecords/" target="_blank" rel="noreferrer">Website</OutboundLink> 
+                      <span> | </span>
+                    <OutboundLink href="https://github.com/HannahGuo/RankedRecords" target="_blank" rel="noreferrer">Code Link</OutboundLink> 
+                  </h5>
+                  <br/>
+                  <p>
+                    Ranked Records is my largest side project yet - it's an app that I wanted to use when I first got Spotify, so I finally built it.
+                    <br/> <br/> The site queries all of an artist's Spotify songs and sorts them by popularity. Plus, there's some other neat functionality like custom playlist creation - a true masterlist!
+                  </p>
+                </div>
                 <div className="projectCard">
                   {scrumptiousRollImage}
                   <h4>Scrumptiousroll</h4>
                   <h5>
                     <OutboundLink href="https://devpost.com/software/scrumptiousroll" target="_blank" rel="noreferrer">Devpost Link</OutboundLink>
+                    <span> | </span>
+                    <OutboundLink href="https://github.com/HannahGuo/Scrumptiousroll" target="_blank" rel="noreferrer">Code Link</OutboundLink> 
                   </h5>
                   <br/>
                   <p>
@@ -192,18 +210,6 @@ const BoxCard = ({boxTheme}) => {
                   <p>
                     Arrowbics was my final project during Google CSSI:Online. It's a fun mini-game inspired by one I 
                     used to play when I was little, called Fantage.
-                  </p>
-                </div>
-                <div className="projectCard">
-                  {vitalsImage}
-                  <h4>Vitals</h4>
-                  <h5>
-                    <OutboundLink href="https://devpost.com/software/vitals" target="_blank" rel="noreferrer">Devpost Link</OutboundLink> 
-                  </h5>
-                  <br/>
-                  <p>
-                    Vitals was my group's project for PennApps XXI. It's an Android + web project primarily for
-                    caretakers to input (and later) access a patient's vitals.
                   </p>
                 </div>
             </div>
