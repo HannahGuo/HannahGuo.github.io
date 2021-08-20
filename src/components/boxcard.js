@@ -180,8 +180,8 @@ const BoxCard = ({boxTheme}) => {
                   </h5>
                   <br/>
                   <p>
-                    Ranked Records is my largest side project yet - it's an app that I wanted to use when I first got Spotify, so I finally built it.
-                    <br/> <br/> The site queries all of an artist's Spotify songs and sorts them by popularity. Plus, there's some other neat functionality like custom playlist creation - a true masterlist!
+                    Ranked Records is my largest project yet - it's an app that I wanted to use when I first got Spotify, so I finally built it.
+                    <br/> <br/> The site allows users to create playlists with all an artist's Spotify songs (not easily possible in the app), which can be sorted in ascending/descending popularity or chronology. It had over 200 users in the first launch week!
                   </p>
                 </div>
                 <div className="projectCard">
