@@ -64,11 +64,15 @@ const generateExpDots = (currentSkill) => {
   return returnMe;
 }
 
+const skillDot = (name) => {
+  return <li key={name}> {name} {generateExpDots(name)} </li>
+}
+
 const LinkLi = (title, link) => {
   return <li key={title}><OutboundLink href={link} target="_blank" rel="noreferrer">{title}</OutboundLink></li>;
 } 
 
-const pfpImage = <StaticImage src="../images/pfp.jpg" alt="Me" placeholder="blurred" className="myPhoto"/>;
+const pfpImage = <StaticImage src="../images/pfp2.jpg" alt="Me" placeholder="blurred" className="myPhoto"/>;
 const scrumptiousRollImage = <StaticImage src="../images/scrumptiousroll.jpg" alt="scrumptiousroll-screenshot" 
                                           placeholder="blurred" layout="constrained" width="8em"/>;
 const arrowbicsImage = <StaticImage src="../images/arrowbics.png" alt="arrowbics-screenshot" 
@@ -91,11 +95,12 @@ const BoxCard = ({boxTheme}) => {
                       <p> My "career goal" in life is to develop software used by millions. 
                           I don't want my code to sit in the corner of the Internet - 
                           I want it to have a positive impact on the world. </p>
-                      <p>In my free time, I enjoy geocaching, solving puzzles, 
+                      <p>In my free time, I enjoy crocheting, geocaching, solving puzzles, 
                         skating, reading and surfing the Internet.</p>
                     </div>
                     <div className="centerJust">
                       {pfpImage}
+                      <span role="img" aria-label="camera">📸 taken during a roadtrip around <OutboundLink href="https://www.nps.gov/olym/index.htm">Olympic National Park!</OutboundLink></span>
                     </div>
                   </div>),
       }, 
@@ -117,37 +122,38 @@ const BoxCard = ({boxTheme}) => {
               <div>
                   <h4>Web Development</h4>
                   <ul>
-                    <li key={"HTML/CSS"}> HTML/CSS {generateExpDots("HTML/CSS")} </li>
-                    <li key={"JavaScript/jQuery"}> JavaScript/jQuery {generateExpDots("JavaScript/jQuery")}</li>
-                    <li key={"React"}> React {generateExpDots("React")} </li>
-                    <li key={"Redux"}> Redux {generateExpDots("Redux")} </li>
-                    <li key={"Angular"}> Angular {generateExpDots("Angular")} </li>
-                    <li key={"Node.js"}> Node.js {generateExpDots("Node.js")} </li>
-                    <li key={"Express"}> Express {generateExpDots("Express")} </li>
-                    <li key={"Gatsby"}> Gatsby {generateExpDots("Gatsby")} </li>
+                    {skillDot("HTML/CSS")}
+                    {skillDot("JavaScript/jQuery")}
+                    {skillDot("React")}
+                    {skillDot("Redux")}
+                    {skillDot("Angular")}
+                    {skillDot("Node.js")}
+                    {skillDot("Express")}
+                    {skillDot("Gatsby")}
                   </ul>
               </div>
               <div>
               <h4>Programming</h4>
                   <ul>
-                    <li key={"Python"}> Python {generateExpDots("Python")} </li>
-                    <li key={"Java"}> Java {generateExpDots("Java")} </li>
-                    <li key={"C++"}> C++ {generateExpDots("C++")} </li>
-                    <li key={"C"}> C {generateExpDots("C")} </li>
+                    {skillDot("Java")}
+                    {skillDot("TypeScript")}
+                    {skillDot("Python")}
+                    {skillDot("C++")}
+                    {skillDot("C")}
                   </ul>
               </div>
               <div>
                 <h4>Tools</h4>
                 <ul>
-                    <li key={"Git/GitHub/GitLab"}> Git/GitHub/GitLab {generateExpDots("Git/GitHub/GitLab")} </li>
-                    <li key={"Figma"}> Figma {generateExpDots("Figma")} </li>
+                  {skillDot("Git/GitHub/GitLab")}
+                  {skillDot("Figma")}
                 </ul>
               </div> 
               <div>
                 <h4>Miscellaneous</h4>
                 <ul>
-                    <li key={"Firebase"}> Firebase {generateExpDots("Figma")} </li>
-                    <li key={"Android"}> Android {generateExpDots("Android")} </li>
+                  {skillDot("Firebase")}
+                  {skillDot("Android")}
                 </ul>
               </div>
             </div>
@@ -181,7 +187,7 @@ const BoxCard = ({boxTheme}) => {
                   <br/>
                   <p>
                     Ranked Records is my largest project yet - it's an app that I wanted to use when I first got Spotify, so I finally built it.
-                    <br/> <br/> The site allows users to create playlists with all an artist's Spotify songs (not easily possible in the app), which can be sorted in ascending/descending popularity or chronology. It had over 200 users in the first launch week!
+                    <br/> <br/> The site allows users to create playlists with all an artist's Spotify songs (not easily possible in the app), which can be sorted in ascending/descending popularity or chronology. It had over 200 users in the first launch week, and continues to receive traffic today!
                   </p>
                 </div>
                 <div className="projectCard">

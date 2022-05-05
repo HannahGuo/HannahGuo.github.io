@@ -187,6 +187,12 @@ const expObj = [
         "type": "Programming",
         "experiences" : [
             {
+                "dotColor": "red",
+                "content": [
+                    "Software Engineering Intern @ Stripe",
+                ]
+            },
+            {
                 "dotColor": "green",
                 "content": [
                     "Lead Programmer @ FIRST Robotics Team 1325",
@@ -196,6 +202,18 @@ const expObj = [
                 "dotColor": "purple",
                 "content": [
                     "Runner-up @ Google Code-in 2019",
+                ]
+            },
+        ]
+    },
+    {
+        "skill": "TypeScript",
+        "type": "Programming",
+        "experiences" : [
+            {
+                "dotColor": "red",
+                "content": [
+                    "Software Engineering Intern @ Stripe",
                 ]
             },
         ]
@@ -234,7 +252,8 @@ const expObj = [
                   "Full-stack Developer @ WFHomie Inc.",
                   "Front-End Developer @ RBC",
                   "Front-End Developer @ Hatch Ltd",
-                ]
+                  "Software Engineering Intern @ Stripe",
+                    ]
             },  
             {
                 "dotColor": "orange",

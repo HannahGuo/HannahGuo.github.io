@@ -205,6 +205,10 @@
     justify-content: center;
 }
 
+.centerJust > span {
+    text-align: center;
+}
+
 .myPhoto {
     border: 0.3em solid #AEAEAE;
     margin: 1em 0em 2em;
