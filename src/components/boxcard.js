@@ -257,7 +257,7 @@ const BoxCard = ({boxTheme}) => {
                 </li>
                 {LinkLi("I, Robot", "https://www.goodreads.com/book/show/1796941.I_Robot")}
                 {LinkLi("The Martian", "https://www.goodreads.com/book/show/18007564-the-martian")}
-                {LinkLi("The Last Hours Trilogy (randomly coloured third book)", "https://www.goodreads.com/series/104049-the-last-hours")}
+                {LinkLi("The Last Hours Trilogy", "https://www.goodreads.com/series/104049-the-last-hours")}
               </ul>
             </div>
             <div>
@@ -274,7 +274,7 @@ const BoxCard = ({boxTheme}) => {
                 {LinkLi("Github Icon", "https://www.flaticon.com/free-icon/github-logo_25231")}
                 {LinkLi("Devpost Icon", "https://iconscout.com/icon/devpost")}
                 {LinkLi("Linkedin Icon", "https://www.iconfinder.com/icons/771370/circle_linkedin_logo_media_network_social_share_icon")}
-                {LinkLi("Medium Icon", "https://www.iconfinder.com/icons/5279113/blog_medium_medium_logo_icon")}
+                {LinkLi("Flickr Icon", "https://www.flaticon.com/free-icon/flickr_179321")}
                 {LinkLi("Potted Plant", "https://www.fotor.com/stickers/t_potted-plant-plum-blossom_8708f9")}
               </ul>
               <br/>

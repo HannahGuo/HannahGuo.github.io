@@ -94,7 +94,7 @@ const Layout = () => {
             [{
               width: "1.8em",
               height: "6.7em",
-              backgroundColor: "#B68925"
+              backgroundColor: "#B75932"
             }, 
             {
               width: "1.8em",
@@ -104,7 +104,7 @@ const Layout = () => {
             {
               width: "1.8em",
               height: "5em",
-              backgroundColor: "#A8527C"
+              backgroundColor: "#939667"
             }
           ]
           }
