@@ -159,6 +159,7 @@ const expObj = [
                 "dotColor": "orange",
                 "content": [
                     "Enhanced Snake with Pygame",
+                    "K-pop Idol Facial Recognition",
                 ]
             },
             {
