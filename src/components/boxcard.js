@@ -72,12 +72,12 @@ const LinkLi = (title, link) => {
   return <li key={title}><OutboundLink href={link} target="_blank" rel="noreferrer">{title}</OutboundLink></li>;
 } 
 
-const pfpImage = <StaticImage src="../images/pfp2.jpg" alt="Me" placeholder="blurred" className="myPhoto"/>;
-const scrumptiousRollImage = <StaticImage src="../images/scrumptiousroll.jpg" alt="scrumptiousroll-screenshot" 
+const pfpImage = <StaticImage src="../images/pfp3.jpg" alt="Me" placeholder="blurred" className="myPhoto"/>;
+const idolRecognitionImage = <StaticImage src="../images/idolrecognition.png" alt="idolrecognition-screenshot" 
                                           placeholder="blurred" layout="constrained" width="8em"/>;
 const arrowbicsImage = <StaticImage src="../images/arrowbics.png" alt="arrowbics-screenshot" 
                                     placeholder="blurred" layout="constrained" width="8em"/>;
-const rankedRecordsImage = <StaticImage src="../images/rankedrecords.png" alt="ranked-records-screenshot" placeholder="blurred"
+const rankedRecordsImage = <StaticImage src="../images/rankedrecords.JPG" alt="ranked-records-screenshot" placeholder="blurred"
                                  layout="constrained" width="8em"/>;
 
 const BoxCard = ({boxTheme}) => {
@@ -100,7 +100,7 @@ const BoxCard = ({boxTheme}) => {
                     </div>
                     <div className="centerJust">
                       {pfpImage}
-                      <span role="img" aria-label="camera">📸 taken during a roadtrip around <OutboundLink href="https://www.nps.gov/olym/index.htm">Olympic National Park!</OutboundLink></span>
+                      <span role="img" aria-label="camera">📸 taken at Big Sur in California!</span>
                     </div>
                   </div>),
       }, 
@@ -122,12 +122,9 @@ const BoxCard = ({boxTheme}) => {
               <div>
                   <h4>Web Development</h4>
                   <ul>
-                    {skillDot("HTML/CSS")}
-                    {skillDot("JavaScript/jQuery")}
                     {skillDot("React")}
                     {skillDot("Redux")}
                     {skillDot("Angular")}
-                    {skillDot("Node.js")}
                     {skillDot("Express")}
                     {skillDot("Gatsby")}
                   </ul>
@@ -135,9 +132,9 @@ const BoxCard = ({boxTheme}) => {
               <div>
               <h4>Programming</h4>
                   <ul>
+                    {skillDot("TypeScript/JavaScript/jQuery")}
                     {skillDot("Java")}
-                    {skillDot("TypeScript")}
-                    {skillDot("Python")}
+                    {skillDot("Ruby")}
                     {skillDot("C++")}
                     {skillDot("C")}
                   </ul>
@@ -153,7 +150,7 @@ const BoxCard = ({boxTheme}) => {
                 <h4>Miscellaneous</h4>
                 <ul>
                   {skillDot("Firebase")}
-                  {skillDot("Android")}
+                  {skillDot("Android and Kotlin")}
                 </ul>
               </div>
             </div>
@@ -180,7 +177,7 @@ const BoxCard = ({boxTheme}) => {
                   {rankedRecordsImage}
                   <h4>Ranked Records</h4>
                   <h5>
-                    <OutboundLink href="https://hannahguo.me/RankedRecords/" target="_blank" rel="noreferrer">Website</OutboundLink> 
+                    <OutboundLink href="https://ranked-records.onrender.com/" target="_blank" rel="noreferrer">Website (might take time to load due to free hosting tier)</OutboundLink> 
                       <span> | </span>
                     <OutboundLink href="https://github.com/HannahGuo/RankedRecords" target="_blank" rel="noreferrer">Code Link</OutboundLink> 
                   </h5>
@@ -191,17 +188,14 @@ const BoxCard = ({boxTheme}) => {
                   </p>
                 </div>
                 <div className="projectCard">
-                  {scrumptiousRollImage}
-                  <h4>Scrumptiousroll</h4>
+                  {idolRecognitionImage}
+                  <h4>Idol Recognition</h4>
                   <h5>
-                    <OutboundLink href="https://devpost.com/software/scrumptiousroll" target="_blank" rel="noreferrer">Devpost Link</OutboundLink>
-                    <span> | </span>
-                    <OutboundLink href="https://github.com/HannahGuo/Scrumptiousroll" target="_blank" rel="noreferrer">Code Link</OutboundLink> 
+                    <OutboundLink href="https://github.com/HannahGuo/Idol-Recognition" target="_blank" rel="noreferrer">Code Link</OutboundLink> 
                   </h5>
                   <br/>
                   <p>
-                    Scrumptiousroll was built with two friends during Hack the North 2020++. It's a 
-                    Chrome Extension trained to identify anime food, and reccomend recipes to cook said food.
+                    Idol Recognition was a fun side project I experimented with Python OpenCV and Facial Recognition for the first time. It's a Python application that uses facial recognition to identify K-Pop idols from an image.
                   </p>
                 </div>
                 <div className="projectCard">

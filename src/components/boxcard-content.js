@@ -1,47 +1,12 @@
 const expObj = [
     {
-      "skill": "HTML/CSS",
-      "type" : "web-development",
-      "experiences": [
-        {
-          "dotColor": "red",
-          "content": [
-            "Full-stack Developer @ WFHomie Inc.",
-            "Front-End Developer @ RBC",
-            "Front-End Developer @ Hatch Ltd",
-          ]
-        },
-        {
-          "dotColor": "orange",
-          "content": [
-            "This site!",
-            "Site for the International Business and Technology program @ T.L. Kennedy S.S."
-          ]
-        },
-        {
-          "dotColor": "green",
-          "content": [
-            "Web Developer @ University of Waterloo Women in STEM",
-            "Lead Programmer @ FIRST Robotics Team 1325",
-          ]
-        },
-        {
-          "dotColor": "blue",
-          "content" : [
-            "Scrumptiousroll @ Hack the North 2020++",
-            "Vitals @ PennApps XXI",
-            "iSteem @ Equithon 2018",
-          ]
-        }
-      ]
-    },
-    {
-        "skill": "JavaScript/jQuery",
-        "type": "web-development",
+        "skill": "TypeScript/JavaScript/jQuery",
+        "type": "Programming",
         "experiences" : [
             {
                 "dotColor": "red",
                 "content": [
+                    "Software Engineering Intern @ Stripe",
                     "Full-stack Developer @ WFHomie Inc.",
                     "Front-End Developer @ RBC",
                     "Front-End Developer @ Hatch Ltd",
@@ -77,6 +42,7 @@ const expObj = [
             {
                 "dotColor": "red",
                 "content": [
+                    "Software Engineering Intern @ Stripe",
                     "Full-stack Developer @ WFHomie Inc.",
                     "Front-End Developer @ Hatch Ltd",
                 ]
@@ -100,6 +66,12 @@ const expObj = [
                     "Full-stack Developer @ WFHomie Inc.",
                 ]
             },
+            {
+                "dotColor": "orange",
+                "content": [
+                    "Ranked Records - Spotify Rankings",
+                ]
+            },
         ]
     },
     {
@@ -110,19 +82,6 @@ const expObj = [
                 "dotColor": "red",
                 "content": [
                     "Front-End Developer @ RBC",
-                ]
-            }
-        ]
-    },
-    {
-        "skill": "Node.js",
-        "type": "web-development",
-        "experiences" : [
-            {
-                "dotColor": "orange",
-                "content": [
-                    "Ranked Records - Spotify Rankings",
-                    "Snappans - Discord Bot"
                 ]
             }
         ]
@@ -208,25 +167,28 @@ const expObj = [
         ]
     },
     {
-        "skill": "TypeScript",
-        "type": "Programming",
-        "experiences" : [
-            {
-                "dotColor": "red",
-                "content": [
-                    "Software Engineering Intern @ Stripe",
-                ]
-            },
-        ]
-    },
-    {
         "skill": "C++",
         "type": "Programming",
         "experiences" : [
             {
                 "dotColor": "pink",
                 "content": [
+                    "CS341 Algorithms @ University of Waterloo",
+                    "CS247 Software Engineering Principles @ University of Waterloo",
+                    "CS240 Data Structures and Data Management @ University of Waterloo",
                     "CS138 Introduction to Data Abstraction and Implementation @ University of Waterloo",
+                ]
+            },
+        ]
+    },
+    {
+        "skill": "Ruby",
+        "type": "Programming",
+        "experiences" : [
+            {
+                "dotColor": "red",
+                "content": [
+                    "Software Engineering Intern @ Stripe",
                 ]
             },
         ]
@@ -320,13 +282,19 @@ const expObj = [
         ]
     },
     {
-        "skill": "Android",
+        "skill": "Android and Kotlin",
         "type": "Miscellaneous",
         "experiences" : [
             {
                 "dotColor": "blue",
                 "content": [
                     "Vitals @ PennApps XXI",
+                ]
+            },
+            {
+                "dotColor": "pink",
+                "content": [
+                    "CS349 User Interfaces @ University of Waterloo",
                 ]
             },
         ]

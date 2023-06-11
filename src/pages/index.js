@@ -3,7 +3,7 @@ import Layout from "../components/layout"
 import "@fontsource/quattrocento-sans"
 import { Helmet } from 'react-helmet'
 import Seo from "../components/seo"
-import ImageSEO from "../images/pfp.jpg";
+import ImageSEO from "../images/pfp3.jpg";
 
 const TITLE = "Hannah Guo";
 
