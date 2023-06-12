@@ -1,3 +1,0 @@
-/*! For license information please see cb1608f2-6eeae5e7c1e0dec65c0b.js.LICENSE.txt */
-(self.webpackChunkgatsby_starter_default=self.webpackChunkgatsby_starter_default||[]).push([[523],{8014:function(e,t,a){"use strict";a.d(t,{diR:function(){return s}});var s={prefix:"fas",iconName:"circle",icon:[512,512,[],"f111","M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8z"]}}}]);
-//# sourceMappingURL=cb1608f2-6eeae5e7c1e0dec65c0b.js.map
