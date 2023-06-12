@@ -1,19 +1,19 @@
 import * as React from "react"
 import Layout from "../components/layout"
 import "@fontsource/quattrocento-sans"
-import { Helmet } from 'react-helmet'
-import Seo from "../components/seo"
+import { SEO } from "../components/seo"
 import ImageSEO from "../images/pfp3.jpg";
 
 const TITLE = "Hannah Guo";
 
+const Head = () => <><SEO title={"Hannah Guo's Website"} 
+description={`Personal/Portfolio Website for Hannah Guo, Software Engineer`} 
+image={ImageSEO}/><title>{TITLE}</title></>
+
 const IndexPage = () => (
   <>
   <span data-nosnippet>
-    <Seo title={"Hannah Guo's Website"} 
-        description={`Personal/Portfolio Website for Hannah Guo, Software Engineer`} 
-        image={ImageSEO}/>
-    <Helmet> <title>{ TITLE }</title> </Helmet>
+    <Head/>
     <Layout></Layout>
   </span>
   </>

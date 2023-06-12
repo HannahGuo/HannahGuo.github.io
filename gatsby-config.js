@@ -8,9 +8,9 @@ module.exports = {
     author: siteConfig.author,
     keywords: siteConfig.keywords,
     image: siteConfig.siteImage,
+    siteUrl: `https://hannahguo.me`
   },
   plugins: [
-    `gatsby-plugin-react-helmet`,
     `gatsby-plugin-sharp`,
     {
       resolve: `gatsby-plugin-manifest`,
