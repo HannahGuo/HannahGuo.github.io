@@ -1,34 +1,34 @@
 @media (min-width: 1001px) {
-    .bookshelf {
-        height: 9em;
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-end;
-        align-items: center;
-    }    
+  .bookshelf {
+    height: 9em;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+  }
 }
 
 @media (max-width: 1000px) {
-    .bookshelf {
-        height: 9em;
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-end;
-        align-items: center;
-        margin: 1em auto;
-    }    
+  .bookshelf {
+    height: 9em;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    margin: 1em auto;
+  }
 }
 
 .bookshelf > .shelf {
-    height: 1.5em;
-    width: inherit;
-    background-color: #644E35;
+  height: 1.5em;
+  width: inherit;
+  background-color: #644e35;
 }
 
 .books {
-    width: inherit;
-    display: flex;
-    flex-direction: row;
-    align-items: flex-end;
-    justify-content: center;
+  width: inherit;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  justify-content: center;
 }

@@ -28,7 +28,7 @@
     flex-direction: row;
     justify-content: space-around;
   }
-  
+
   #right-room-shelf-col-left {
     display: flex;
     flex-direction: column;
@@ -36,7 +36,7 @@
     padding-top: 4em;
     padding-bottom: 12em;
   }
-  
+
   #right-room-shelf-col-right {
     display: flex;
     flex-direction: column;

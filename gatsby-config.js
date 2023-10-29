@@ -1,4 +1,4 @@
-const siteConfig = require('./config.json')
+const siteConfig = require("./config.json")
 
 module.exports = {
   pathPrefix: `/`,
@@ -8,7 +8,7 @@ module.exports = {
     author: siteConfig.author,
     keywords: siteConfig.keywords,
     image: siteConfig.siteImage,
-    siteUrl: `https://hannahguo.me`
+    siteUrl: `https://hannahguo.me`,
   },
   plugins: [
     `gatsby-plugin-sharp`,
@@ -21,8 +21,8 @@ module.exports = {
         background_color: siteConfig.background_color,
         theme_color: siteConfig.theme_color,
         display: `standalone`,
-        icon: `public/favicon.png`,
-      }
+        icon: `${__dirname}/src/images/favicon.png`,
+      },
     },
     `gatsby-plugin-image`,
     {
@@ -37,12 +37,10 @@ module.exports = {
     {
       resolve: `gatsby-plugin-google-gtag`,
       options: {
-        trackingIds: [
-          siteConfig.googleAnalytics
-        ],
+        trackingIds: [siteConfig.googleAnalytics],
         gtagConfig: {
           cookie_expires: 0,
-          send_page_view: true
+          send_page_view: true,
         },
         pluginConfig: {
           head: true,
