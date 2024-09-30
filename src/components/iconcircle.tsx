@@ -2,7 +2,14 @@ import * as React from "react"
 import "../styles/iconcircle.css"
 import { OutboundLink } from "gatsby-plugin-google-gtag"
 
-const IconCircle = ({ color, icon, tilt, link }) => {
+interface IconCircleProps {
+  color: string;
+  icon: string;
+  tilt: number;
+  link: string;
+}
+
+const IconCircle: React.FC<IconCircleProps> = ({ color, icon, tilt, link }) => {
   let defaultStyle = {
     backgroundColor: color,
     backgroundImage: `url("../images/${icon}.png")`,

@@ -1,11 +1,5 @@
 import * as React from "react"
-import Modal from "react-modal"
 import "../styles/boxcard.css"
-
-import findPerson from "../images/find-person.png"
-import codeDocument from "../images/code-document.png"
-import ideaDesign from "../images/idea-design.png"
-import siteDetails from "../images/website.png"
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faCircle } from "@fortawesome/free-solid-svg-icons"
@@ -14,82 +8,8 @@ import { StaticImage } from "gatsby-plugin-image"
 import { OutboundLink } from "gatsby-plugin-google-gtag"
 
 import ReactTooltip from "react-tooltip"
-import expObj from "../components/boxcard-content"
 
-const generateExpDots = currentSkill => {
-  let currentObj = expObj.find(x => x.skill === currentSkill)
-  let returnMe = []
-
-  currentObj.experiences.forEach((element, index) => {
-    let currentCat = ""
-    switch (element.dotColor) {
-      case "red":
-        currentCat = "Work"
-        break
-      case "orange":
-        currentCat = "Side Projects"
-        break
-      case "green":
-        currentCat = "Volunteering/Extracurriculars"
-        break
-      case "blue":
-        currentCat = "Hackathons"
-        break
-      case "purple":
-        currentCat = "Competitions/Contests"
-        break
-      case "pink":
-        currentCat = "CS Class"
-        break
-      default:
-        currentCat = "Work"
-        console.log(`Invalid color ${element.dotColor}`)
-        break
-    }
-
-    returnMe.push(
-      <span key={`key${currentSkill}${currentCat}`}>
-        <FontAwesomeIcon
-          key={`fai${currentSkill}${currentCat}`}
-          data-tip
-          data-for={`${currentSkill}${currentCat}`}
-          className={`modalDot ${element.dotColor}`}
-          icon={faCircle}
-        />
-        <ReactTooltip
-          key={`rtt${currentSkill}${currentCat}`}
-          id={`${currentSkill}${currentCat}`}
-        >
-          {currentCat}
-          <ul key={`ul${currentObj.skill}${element.dotColor}`}>
-            {element.content.map((x, index) => {
-              return (
-                <li
-                  key={`${index}x${currentSkill}x${element.content.length}x${element.dotColor}x${x}`}
-                >
-                  {x}
-                </li>
-              )
-            })}
-          </ul>
-        </ReactTooltip>
-      </span>
-    )
-  })
-
-  return returnMe
-}
-
-const skillDot = name => {
-  return (
-    <li key={name}>
-      {" "}
-      {name} {generateExpDots(name)}{" "}
-    </li>
-  )
-}
-
-const LinkLi = (title, link) => {
+const LinkLi = (title: string, link: string) => {
   return (
     <li key={title}>
       <OutboundLink href={link} target="_blank" rel="noreferrer">
@@ -113,7 +33,7 @@ const idolRecognitionImage = (
     alt="idolrecognition-screenshot"
     placeholder="blurred"
     layout="constrained"
-    width="8em"
+    width={8}
   />
 )
 const arrowbicsImage = (
@@ -122,7 +42,7 @@ const arrowbicsImage = (
     alt="arrowbics-screenshot"
     placeholder="blurred"
     layout="constrained"
-    width="8em"
+    width={8}
   />
 )
 const rankedRecordsImage = (
@@ -131,15 +51,19 @@ const rankedRecordsImage = (
     alt="ranked-records-screenshot"
     placeholder="blurred"
     layout="constrained"
-    width="8em"
+    width={8}
   />
 )
 
-const BoxCard = ({ boxTheme }) => {
+type BoxCardProps = {
+  boxTheme: string;
+};
+
+export const BoxCard: React.FC<BoxCardProps> = ({ boxTheme }) => {
   const boxThemes = [
     {
       title: "About Me",
-      image: findPerson,
+      image: '',
       content: (
         <div className="splitHalf">
           <div>
@@ -188,7 +112,7 @@ const BoxCard = ({ boxTheme }) => {
     },
     {
       title: "My Tech Stack",
-      image: codeDocument,
+      image: '',
       content: (
         <div>
           <div>
@@ -196,63 +120,41 @@ const BoxCard = ({ boxTheme }) => {
           </div>
           <div id="techCategories">
             <span className="red">
-              <FontAwesomeIcon className="modalDot" icon={faCircle} /> Work
+              <FontAwesomeIcon className="sidePanelDot" icon={faCircle} /> Work
             </span>
             <span className="orange">
-              <FontAwesomeIcon className="modalDot" icon={faCircle} /> Side
+              <FontAwesomeIcon className="sidePanelDot" icon={faCircle} /> Side
               Projects{" "}
             </span>
             <span className="green">
-              <FontAwesomeIcon className="modalDot" icon={faCircle} />{" "}
+              <FontAwesomeIcon className="sidePanelDot" icon={faCircle} />{" "}
               Volunteering/Extracurriculars
             </span>
             <span className="blue">
-              <FontAwesomeIcon className="modalDot" icon={faCircle} />{" "}
+              <FontAwesomeIcon className="sidePanelDot" icon={faCircle} />{" "}
               Hackathons
             </span>
             <span className="purple">
-              <FontAwesomeIcon className="modalDot" icon={faCircle} />{" "}
+              <FontAwesomeIcon className="sidePanelDot" icon={faCircle} />{" "}
               Competitions/Contests
             </span>
             <span className="pink">
-              <FontAwesomeIcon className="modalDot" icon={faCircle} /> CS
+              <FontAwesomeIcon className="sidePanelDot" icon={faCircle} /> CS
               Classes
             </span>
           </div>
           <div className="fourSquareGrid">
             <div>
               <h4>Web Development</h4>
-              <ul>
-                {skillDot("React")}
-                {skillDot("Redux")}
-                {skillDot("Angular")}
-                {skillDot("Express")}
-                {skillDot("Gatsby")}
-              </ul>
             </div>
             <div>
               <h4>Programming</h4>
-              <ul>
-                {skillDot("TypeScript/JavaScript/jQuery")}
-                {skillDot("Java")}
-                {skillDot("Ruby")}
-                {skillDot("C++")}
-                {skillDot("C")}
-              </ul>
             </div>
             <div>
               <h4>Tools</h4>
-              <ul>
-                {skillDot("Git/GitHub/GitLab")}
-                {skillDot("Figma")}
-              </ul>
             </div>
             <div>
               <h4>Miscellaneous</h4>
-              <ul>
-                {skillDot("Firebase")}
-                {skillDot("Android and Kotlin")}
-              </ul>
             </div>
           </div>
           <div className="rightAlign">
@@ -284,7 +186,7 @@ const BoxCard = ({ boxTheme }) => {
     },
     {
       title: "My Projects",
-      image: ideaDesign,
+      image: '',
       content: (
         <div>
           <div>
@@ -403,7 +305,7 @@ const BoxCard = ({ boxTheme }) => {
     },
     {
       title: "Site Details",
-      image: siteDetails,
+      image: '',
       content: (
         <div className="splitHalf">
           <div>
@@ -543,8 +445,8 @@ const BoxCard = ({ boxTheme }) => {
             </h4>
             <ul>
               {LinkLi(
-                "react-modal",
-                "https://www.npmjs.com/package/react-modal"
+                "react-sidePanel",
+                "https://www.npmjs.com/package/react-sidePanel"
               )}
               {LinkLi(
                 "react-tooltip",
@@ -567,7 +469,7 @@ const BoxCard = ({ boxTheme }) => {
     },
   ]
 
-  const modalStyle = {
+  const sidePanelStyle = {
     overlay: {
       backgroundColor: "rgba(0, 0, 0, 0.75)",
     },
@@ -591,55 +493,53 @@ const BoxCard = ({ boxTheme }) => {
   let currentTitle = currentTheme.title
   let currentContent = currentTheme.content
 
-  const [showModal, setModal] = React.useState(false)
+  const [showSidePanel, setSidePanel] = React.useState(false)
 
-  function openModal() {
-    setModal(true)
+  function openSidePanel() {
+    setSidePanel(true)
   }
 
-  function closeModal() {
-    setModal(false)
+  function closeSidePanel() {
+    setSidePanel(false)
   }
 
   return (
     <>
-      <Modal
-        isOpen={showModal}
-        onRequestClose={closeModal}
+      {/* <SidePanel
+        isOpen={showSidePanel}
+        onRequestClose={closeSidePanel}
         ariaHideApp={false}
-        style={modalStyle}
-        contentLabel={`${currentTitle} Modal`}
+        style={sidePanelStyle}
+        contentLabel={`${currentTitle} SidePanel`}
       >
-        <div className="modal-header">
-          <div className="modal-header-title">
+        <div className="sidePanel-header">
+          <div className="sidePanel-header-title">
             <img src={currentIcon} alt={currentTitle}></img>
             {currentTitle}
           </div>
           <div
-            className="close-modal"
+            className="close-sidePanel"
             role="button"
             tabIndex={0}
-            onClick={closeModal}
-            onKeyDown={closeModal}
+            onClick={closeSidePanel}
+            onKeyDown={closeSidePanel}
           >
             x
           </div>
         </div>
         {currentContent}
-      </Modal>
+      </SidePanel>
 
       <div
         role="button"
         tabIndex={0}
         className="boxcard"
-        onClick={openModal}
-        onKeyDown={openModal}
+        onClick={openSidePanel}
+        onKeyDown={openSidePanel}
       >
         <img src={currentIcon} alt={currentTitle}></img>
         {currentTitle}
-      </div>
+      </div> */}
     </>
   )
 }
-
-export default BoxCard

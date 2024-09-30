@@ -8,7 +8,14 @@
 import * as React from "react"
 import { useSiteMetadata } from "../hooks/useSiteMetadata"
 
-export const Seo = ({ title, description, pathname, children }) => {
+interface SeoProps {
+  title?: string;
+  description?: string;
+  pathname?: string;
+  children?: React.ReactNode;
+}
+
+export const Seo: React.FC<SeoProps> = ({ title, description, pathname, children }) => {
   const {
     title: defaultTitle,
     description: defaultDescription,

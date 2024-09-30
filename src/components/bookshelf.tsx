@@ -1,9 +1,22 @@
 import * as React from "react"
-import Book from "../components/book"
+import Book from "./book"
 import "../styles/bookshelf.css"
-import BoxCard from "./boxcard"
+import {BoxCard} from "./boxcard"
 
-const Bookshelf = ({ books, boxCardPos, boxTheme, shelfWidth }) => {
+interface Book {
+  width: string;
+  height: string;
+  backgroundColor: string;
+}
+
+interface BookshelfProps {
+  books: Book[];
+  boxCardPos: number;
+  boxTheme: string;
+  shelfWidth: string;
+}
+
+const Bookshelf: React.FC<BookshelfProps> = ({ books, boxCardPos, boxTheme, shelfWidth }) => {
   let shelfContent = []
   let index = 0
   let hasAddedBox = false

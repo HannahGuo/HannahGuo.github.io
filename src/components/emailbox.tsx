@@ -1,9 +1,8 @@
 import * as React from "react"
 import "../styles/emailbox.css"
-import MailIcon from "../images/mailIcon.png"
 import { OutboundLink } from "gatsby-plugin-google-gtag"
 
-const Emailbox = () => (
+export const Emailbox = () => (
   <div id="emailbox">
     <div id="emailbox-body">
       <div id="emailbox-slot"></div>
@@ -13,7 +12,7 @@ const Emailbox = () => (
         href="https://mailhide.io/e/tXYU7XHq"
       >
         <div id="emailbox-center">
-          <img src={MailIcon} alt="E-mail Icon"></img>
+          <img src={''} alt="E-mail Icon"></img>
         </div>
       </OutboundLink>
     </div>
@@ -23,5 +22,3 @@ const Emailbox = () => (
     </div>
   </div>
 )
-
-export default Emailbox

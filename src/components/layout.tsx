@@ -6,7 +6,7 @@ import "../styles/layout.css"
 import Bookshelf from "./bookshelf"
 import Plant from "./plant"
 
-const Layout = () => {
+export const Layout = () => {
   return (
     <div id="holder">
       <div id="room">
@@ -119,5 +119,3 @@ const Layout = () => {
     </div>
   )
 }
-
-export default Layout
