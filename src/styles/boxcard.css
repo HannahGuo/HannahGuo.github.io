@@ -1,332 +1,332 @@
 .boxcard {
-  width: 7em;
-  height: 6.3em;
-  background-color: #e5e5e5;
-  color: black;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-around;
-  padding-top: 0.7em;
-  font-weight: 900;
-  cursor: pointer;
-  top: 0;
-  transition: 0.2s;
-  position: relative;
+	width: 7em;
+	height: 6.3em;
+	background-color: #e5e5e5;
+	color: black;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-around;
+	padding-top: 0.7em;
+	font-weight: 900;
+	cursor: pointer;
+	top: 0;
+	transition: 0.2s;
+	position: relative;
 }
 
 .boxcard > img {
-  width: 55%;
-  height: auto;
+	width: 55%;
+	height: auto;
 }
 
 .boxcard:hover {
-  -webkit-transform: translateY(-1em);
-  -moz-transform: translateY(-1em);
-  -ms-transform: translateY(-1em);
-  -o-transform: translateY(-1em);
-  transform: translateY(-1em);
+	-webkit-transform: translateY(-1em);
+	-moz-transform: translateY(-1em);
+	-ms-transform: translateY(-1em);
+	-o-transform: translateY(-1em);
+	transform: translateY(-1em);
 }
 
 .modal-header {
-  width: 100%;
-  height: 10%;
-  display: flex;
-  flex-direction: row;
-  margin: 0 auto;
-  margin-bottom: 2em;
+	width: 100%;
+	height: 10%;
+	display: flex;
+	flex-direction: row;
+	margin: 0 auto;
+	margin-bottom: 2em;
 }
 
 .modal-header-title {
-  height: 100%;
-  font-weight: 900;
-  font-size: 1.8em;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  flex-grow: 9;
+	height: 100%;
+	font-weight: 900;
+	font-size: 1.8em;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	flex-grow: 9;
 }
 
 .close-modal {
-  vertical-align: top;
-  width: 1.5em;
-  height: 1.5em;
-  text-align: center;
-  color: white;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  background-color: #c3231f;
-  cursor: pointer;
-  font-weight: 900;
-  margin-top: -1em;
-  margin-right: -1em;
-  transition: 0.3s;
+	vertical-align: top;
+	width: 1.5em;
+	height: 1.5em;
+	text-align: center;
+	color: white;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	background-color: #c3231f;
+	cursor: pointer;
+	font-weight: 900;
+	margin-top: -1em;
+	margin-right: -1em;
+	transition: 0.3s;
 }
 
 .close-modal:hover {
-  background-color: #8a0101;
+	background-color: #8a0101;
 }
 
 .modal-header > .modal-header-title > img {
-  height: 100%;
-  margin-right: 0.5em;
+	height: 100%;
+	margin-right: 0.5em;
 }
 
 .splitHalf {
-  height: 100%;
-  width: 100%;
-  display: flex;
-  flex-direction: row;
+	height: 100%;
+	width: 100%;
+	display: flex;
+	flex-direction: row;
 }
 
 @media (min-width: 1600px) {
-  .ReactModal__Content,
-  .ReactModal__Content--after-open {
-    height: 60% !important;
-  }
+	.ReactModal__Content,
+	.ReactModal__Content--after-open {
+		height: 60% !important;
+	}
 
-  .splitHalf > div {
-    box-sizing: border-box;
-    display: flex;
-    flex-direction: column;
-    align-content: center;
-    padding: 1.5em;
-  }
+	.splitHalf > div {
+		box-sizing: border-box;
+		display: flex;
+		flex-direction: column;
+		align-content: center;
+		padding: 1.5em;
+	}
 
-  .gridRow > .projectCard:first-child {
-    border-right: 0.1em dotted #aeaeae;
-  }
+	.gridRow > .projectCard:first-child {
+		border-right: 0.1em dotted #aeaeae;
+	}
 
-  .gridRow > .projectCard:last-child {
-    border-left: 0.1em dotted #aeaeae;
-  }
+	.gridRow > .projectCard:last-child {
+		border-left: 0.1em dotted #aeaeae;
+	}
 }
 
 @media (min-width: 1001px) {
-  .splitHalf {
-    flex-direction: row;
-  }
+	.splitHalf {
+		flex-direction: row;
+	}
 
-  .splitHalf > div {
-    box-sizing: border-box;
-    display: flex;
-    flex-direction: column;
-    align-content: center;
-    padding: 1.5em;
-    width: 50%;
-  }
+	.splitHalf > div {
+		box-sizing: border-box;
+		display: flex;
+		flex-direction: column;
+		align-content: center;
+		padding: 1.5em;
+		width: 50%;
+	}
 
-  .splitHalf > div:last-child {
-    padding-right: 0;
-  }
+	.splitHalf > div:last-child {
+		padding-right: 0;
+	}
 
-  .splitHalf > div:first-child {
-    padding-left: 0;
-    border-right: 0.1em dotted #aeaeae;
-  }
+	.splitHalf > div:first-child {
+		padding-left: 0;
+		border-right: 0.1em dotted #aeaeae;
+	}
 
-  .fourSquareGrid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-gap: 2em;
-    margin-top: 1.5em;
-    margin-bottom: 1.5em;
-  }
+	.fourSquareGrid {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		grid-gap: 2em;
+		margin-top: 1.5em;
+		margin-bottom: 1.5em;
+	}
 
-  .gridRow > .projectCard:first-child {
-    border-right: 0.1em dotted #aeaeae;
-  }
+	.gridRow > .projectCard:first-child {
+		border-right: 0.1em dotted #aeaeae;
+	}
 
-  .gridRow > .projectCard:last-child {
-    border-left: 0.1em dotted #aeaeae;
-  }
+	.gridRow > .projectCard:last-child {
+		border-left: 0.1em dotted #aeaeae;
+	}
 }
 
 @media (max-width: 1000px) {
-  .splitHalf {
-    flex-direction: column;
-  }
+	.splitHalf {
+		flex-direction: column;
+	}
 
-  .splitHalf > div {
-    box-sizing: border-box;
-    display: flex;
-    flex-direction: column;
-    align-content: center;
-    padding: 1.5em;
-    padding-top: 0;
-    width: 100%;
-  }
+	.splitHalf > div {
+		box-sizing: border-box;
+		display: flex;
+		flex-direction: column;
+		align-content: center;
+		padding: 1.5em;
+		padding-top: 0;
+		width: 100%;
+	}
 
-  .splitHalf > div {
-    width: 100%;
-  }
+	.splitHalf > div {
+		width: 100%;
+	}
 
-  .fourSquareGrid {
-    display: flex;
-    flex-direction: column;
-    margin-top: 1.5em;
-    margin-bottom: 1.5em;
-  }
+	.fourSquareGrid {
+		display: flex;
+		flex-direction: column;
+		margin-top: 1.5em;
+		margin-bottom: 1.5em;
+	}
 
-  .fourSquareGrid > div {
-    margin-top: 1em;
-    margin-bottom: 1em;
-  }
+	.fourSquareGrid > div {
+		margin-top: 1em;
+		margin-bottom: 1em;
+	}
 
-  .gridRow {
-    flex-direction: column;
-  }
+	.gridRow {
+		flex-direction: column;
+	}
 
-  .gridRow > .projectCard:first-child {
-    border-bottom: 0.1em dotted #aeaeae;
-  }
+	.gridRow > .projectCard:first-child {
+		border-bottom: 0.1em dotted #aeaeae;
+	}
 
-  .gridRow > .projectCard:last-child {
-    border-top: 0.1em dotted #aeaeae;
-  }
+	.gridRow > .projectCard:last-child {
+		border-top: 0.1em dotted #aeaeae;
+	}
 }
 
 .splitHalf p:not(:last-child) {
-  margin-bottom: 2em;
+	margin-bottom: 2em;
 }
 
 .splitHalf > div:first-child ul:last-child {
-  margin-top: -1em;
+	margin-top: -1em;
 }
 
 .splitHalf ul > li {
-  margin-left: 1.5em;
-  line-height: 1.2em;
+	margin-left: 1.5em;
+	line-height: 1.2em;
 }
 
 .centerJust {
-  justify-content: center;
+	justify-content: center;
 }
 
 .centerJust > span {
-  text-align: center;
+	text-align: center;
 }
 
 .myPhoto {
-  border: 0.3em solid #aeaeae;
-  margin: 1em 0em 2em;
-  display: block;
-  text-align: center;
+	border: 0.3em solid #aeaeae;
+	margin: 1em 0em 2em;
+	display: block;
+	text-align: center;
 }
 
 #techCategories {
-  margin-top: 1em;
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: space-around;
+	margin-top: 1em;
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: space-around;
 }
 
 #techCategories > span {
-  padding: 0.1em;
-  width: auto;
+	padding: 0.1em;
+	width: auto;
 }
 
 .modalDot {
-  font-size: 0.6em;
-  vertical-align: baseline;
-  margin-right: 0.2em;
-  margin-left: 0.8em;
-  line-height: inherit;
-  display: inline-block;
+	font-size: 0.6em;
+	vertical-align: baseline;
+	margin-right: 0.2em;
+	margin-left: 0.8em;
+	line-height: inherit;
+	display: inline-block;
 }
 
 .modalDot:hover {
-  cursor: pointer;
+	cursor: pointer;
 }
 
 .red {
-  color: #ff0000;
+	color: #ff0000;
 }
 
 .orange {
-  color: #e27a00;
+	color: #e27a00;
 }
 
 .green {
-  color: #207a12;
+	color: #207a12;
 }
 
 .blue {
-  color: #169cba;
+	color: #169cba;
 }
 
 .purple {
-  color: #8f16ba;
+	color: #8f16ba;
 }
 
 .pink {
-  color: #e708c3;
+	color: #e708c3;
 }
 
 .fourSquareGrid li {
-  margin-left: 1.5em;
-  font-weight: 900;
-  line-height: 1.5em;
+	margin-left: 1.5em;
+	font-weight: 900;
+	line-height: 1.5em;
 }
 
 .fourSquareGrid h4 {
-  text-decoration: underline;
-  margin-bottom: 0.1em;
+	text-decoration: underline;
+	margin-bottom: 0.1em;
 }
 
 .rightAlign {
-  width: inherit;
-  margin-top: 1em;
-  text-align: right;
+	width: inherit;
+	margin-top: 1em;
+	text-align: right;
 }
 
 .__react_component_tooltip {
-  width: 14em;
-  white-space: pre-wrap;
+	width: 14em;
+	white-space: pre-wrap;
 }
 
 #checkGithub {
-  margin-top: 2em;
-  font-weight: 900;
-  vertical-align: middle;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+	margin-top: 2em;
+	font-weight: 900;
+	vertical-align: middle;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 
 #checkGithub > a {
-  padding-left: 0.5em;
+	padding-left: 0.5em;
 }
 
 .gridRow {
-  display: flex;
-  width: 100%;
-  margin-top: 1em;
+	display: flex;
+	width: 100%;
+	margin-top: 1em;
 }
 
 .gridRow > .projectCard {
-  display: flex;
-  flex-direction: column;
-  box-sizing: border-box;
-  padding: 1em;
-  flex: 1 1 0px;
+	display: flex;
+	flex-direction: column;
+	box-sizing: border-box;
+	padding: 1em;
+	flex: 1 1 0px;
 }
 
 .gridRow > .projectCard > img {
-  width: 100%;
-  height: auto;
+	width: 100%;
+	height: auto;
 }
 
 .gridRow > .projectCard > h4 {
-  margin-top: 0.5em;
+	margin-top: 0.5em;
 }
 
 .splitHalf p:not(:last-child) + ul {
-  margin-top: -1em;
+	margin-top: -1em;
 }
 
 ul {
-  margin-bottom: 1em;
+	margin-bottom: 1em;
 }

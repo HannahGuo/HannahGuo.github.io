@@ -1,32 +1,32 @@
 #floor {
-  background-color: #644e35;
-  color: #e9c3a0;
-  cursor: pointer;
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  transition: 0.5s;
-  position: absolute;
-  text-align: center;
-  left: 0;
-  bottom: 0;
+	background-color: #644e35;
+	color: #e9c3a0;
+	cursor: pointer;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	transition: 0.5s;
+	position: absolute;
+	text-align: center;
+	left: 0;
+	bottom: 0;
 }
 
 #floor:hover {
-  color: white;
+	color: white;
 }
 
 @media (min-width: 1001px) {
-  #floor {
-    height: 2em;
-  }
+	#floor {
+		height: 2em;
+	}
 }
 
 @media (max-width: 1000px) {
-  #floor {
-    height: 4em;
-    box-sizing: border-box;
-    padding: 1em;
-  }
+	#floor {
+		height: 4em;
+		box-sizing: border-box;
+		padding: 1em;
+	}
 }

@@ -1,35 +1,35 @@
 #resume {
-  background-color: #c5a500;
-  display: flex;
-  flex-direction: column-reverse;
-  width: 11em;
-  height: 3.2em;
-  position: relative;
-  top: 0;
-  transition: 0.2s;
-  cursor: pointer;
+	background-color: #c5a500;
+	display: flex;
+	flex-direction: column-reverse;
+	width: 11em;
+	height: 3.2em;
+	position: relative;
+	top: 0;
+	transition: 0.2s;
+	cursor: pointer;
 }
 
 #resume > div {
-  background-color: #ffd600;
-  color: black;
-  height: 2em;
-  display: flex;
-  align-items: center;
-  text-align: center;
-  justify-content: center;
-  font-weight: bolder;
-  font-size: 1.3em;
+	background-color: #ffd600;
+	color: black;
+	height: 2em;
+	display: flex;
+	align-items: center;
+	text-align: center;
+	justify-content: center;
+	font-weight: bolder;
+	font-size: 1.3em;
 }
 
 #resume:hover {
-  -webkit-transform: translateY(-0.5em);
-  -moz-transform: translateY(-0.5em);
-  -ms-transform: translateY(-0.5em);
-  -o-transform: translateY(-0.5em);
-  transform: translateY(-0.5em);
+	-webkit-transform: translateY(-0.5em);
+	-moz-transform: translateY(-0.5em);
+	-ms-transform: translateY(-0.5em);
+	-o-transform: translateY(-0.5em);
+	transform: translateY(-0.5em);
 }
 
 #flootshelf-bot a:hover {
-  text-decoration: none;
+	text-decoration: none;
 }

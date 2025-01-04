@@ -1,26 +1,26 @@
 * {
-  margin: 0px;
-  padding: 0px;
+	margin: 0px;
+	padding: 0px;
 }
 
 html {
-  font-family: "Quattrocento Sans";
-  color: white;
-  background-color: #191f41;
+	font-family: "Quattrocento Sans";
+	color: white;
+	background-color: #191f41;
 }
 
 html,
 body,
 #___gatsby,
 #gatsby-focus-wrapper {
-  height: 100%;
-  width: 100%;
+	height: 100%;
+	width: 100%;
 }
 
 a {
-  text-decoration: none;
+	text-decoration: none;
 }
 
 a:hover {
-  text-decoration: underline;
+	text-decoration: underline;
 }

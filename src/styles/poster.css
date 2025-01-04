@@ -1,43 +1,43 @@
 #poster {
-  background-color: #f2f2f2;
-  width: 24em;
-  height: 15.4em;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-evenly;
-  padding-top: 0.8em;
-  padding-bottom: 0.6em;
-  cursor: default;
+	background-color: #f2f2f2;
+	width: 24em;
+	height: 15.4em;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-evenly;
+	padding-top: 0.8em;
+	padding-bottom: 0.6em;
+	cursor: default;
 }
 
 #poster > img {
-  width: 80%;
-  height: auto;
-  margin-bottom: 0.5em;
+	width: 80%;
+	height: auto;
+	margin-bottom: 0.5em;
 }
 
 #poster > #myName {
-  font-size: 1.5em;
-  font-weight: bold;
-  color: black;
+	font-size: 1.5em;
+	font-weight: bold;
+	color: black;
 }
 
 #poster > span {
-  font-size: 0.8em;
-  color: #514e64;
+	font-size: 0.8em;
+	color: #514e64;
 }
 
 #poster > div {
-  width: 92%;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
+	width: 92%;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
 }
 
 #poster > div > .posterpin {
-  border-radius: 50%;
-  background-color: #191f41;
-  width: 0.8em;
-  height: 0.8em;
+	border-radius: 50%;
+	background-color: #191f41;
+	width: 0.8em;
+	height: 0.8em;
 }

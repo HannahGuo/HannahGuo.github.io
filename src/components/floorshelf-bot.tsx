@@ -4,12 +4,12 @@ import { Resume } from "../components/resume"
 import { Emailbox } from "./emailbox"
 
 const FloorShelfBot = () => (
-  <div id="flootshelf-bot" className="floorshelf">
-    <div>
-      <Resume></Resume>
-      <Emailbox></Emailbox>
-    </div>
-  </div>
+	<div id="flootshelf-bot" className="floorshelf">
+		<div>
+			<Resume />
+			<Emailbox />
+		</div>
+	</div>
 )
 
 export default FloorShelfBot
