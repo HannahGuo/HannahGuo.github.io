@@ -4,7 +4,10 @@ import { Resume } from "../components/resume"
 import { Emailbox } from "./emailbox"
 
 const FloorShelfBot = () => (
-	<div id="flootshelf-bot" className="floorshelf">
+	<div
+		id="flootshelf-bot"
+		className="floorshelf"
+	>
 		<div>
 			<Resume />
 			<Emailbox />

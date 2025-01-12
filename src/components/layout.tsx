@@ -115,7 +115,7 @@ export const Layout = () => {
 									},
 								]}
 								boxCardPos={2}
-								boxId="my-projects"
+								boxId={"my-projects"}
 							/>
 							<Bookshelf
 								shelfWidth="15em"
@@ -137,7 +137,7 @@ export const Layout = () => {
 									},
 								]}
 								boxCardPos={2}
-								boxId="side-quests"
+								boxId={"side-quests"}
 							/>
 						</div>
 					</div>

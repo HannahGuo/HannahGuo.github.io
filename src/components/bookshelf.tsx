@@ -29,7 +29,12 @@ const Bookshelf: React.FC<BookshelfProps> = ({
 
 	while (index < books.length) {
 		if (index === boxCardPos && !hasAddedBox) {
-			shelfContent.push(<BoxCard key={"box" + boxId} id={boxId} />)
+			shelfContent.push(
+				<BoxCard
+					key={"box" + boxId}
+					id={boxId}
+				/>,
+			)
 			hasAddedBox = true
 			continue
 		} else {
@@ -47,9 +52,12 @@ const Bookshelf: React.FC<BookshelfProps> = ({
 
 	return (
 		<>
-			<div className="bookshelf" style={{ width: shelfWidth }}>
+			<div
+				className="bookshelf"
+				style={{ width: shelfWidth }}
+			>
 				<div className="books">{shelfContent}</div>
-				<div className="shelf"></div>
+				<div className="shelf" />
 			</div>
 		</>
 	)

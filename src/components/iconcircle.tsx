@@ -1,6 +1,6 @@
+import { OutboundLink } from "gatsby-plugin-google-gtag"
 import * as React from "react"
 import "../styles/iconcircle.css"
-import { OutboundLink } from "gatsby-plugin-google-gtag"
 
 interface IconCircleProps {
 	color: string

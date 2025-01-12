@@ -53,7 +53,10 @@ export const BoxCard: React.FC<BoxCardProps> = ({ id }) => {
 			onClick={() => handleSidePanelChange(content, "about-me")}
 			onKeyDown={() => handleSidePanelChange(content, "about-me")}
 		>
-			<img src={currentIcon} alt={currentTitle}></img>
+			<img
+				src={currentIcon}
+				alt={currentTitle}
+			></img>
 			{currentTitle}
 		</div>
 	)
