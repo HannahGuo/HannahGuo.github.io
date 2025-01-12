@@ -13,9 +13,9 @@ export const SidePanelContext = React.createContext<{
 		lastState: SidePanelType,
 		nextState: SidePanelType,
 	) => void
-	content: SidePanelType
+	panelID: SidePanelType
 }>({
 	isOpen: false,
 	handleSidePanelChange: () => {},
-	content: "none",
+	panelID: "none",
 })

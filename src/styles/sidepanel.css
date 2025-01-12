@@ -1,8 +1,11 @@
 .sidePanel {
     background-color: #E5E5E5;
-    height: 100%;
+    height: calc(100% - 2em);
     position: absolute;    
     z-index: 2;
+    top: 0;
+    overflow: hidden;
+    color: black;
 }
 
 .sidePanel-open {

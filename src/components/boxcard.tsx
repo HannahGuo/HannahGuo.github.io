@@ -17,17 +17,22 @@ export const BoxCard: React.FC<BoxCardProps> = ({ id }) => {
 	const boxThemes: BoxTheme[] = [
 		{
 			title: "About Me",
-			icon: "",
+			icon: "../images/find-person.png",
 			id: "about-me",
 		},
 		{
 			title: "My Projects",
-			icon: "",
+			icon: "../images/idea-design.png",
 			id: "my-projects",
 		},
 		{
+			title: "My Work",
+			icon: "../images/code-document.png",
+			id: "my-work",
+		},
+		{
 			title: "Side Quests",
-			icon: "",
+			icon: "../images/sideQuests.png",
 			id: "side-quests",
 		},
 	]
@@ -36,13 +41,9 @@ export const BoxCard: React.FC<BoxCardProps> = ({ id }) => {
 
 	let currentTheme = boxThemes[index]
 
-	if (currentTheme === undefined) {
-		return <div>Theme not found</div>
-	}
-
 	let { title: currentTitle, icon: currentIcon } = currentTheme
 
-	const { handleSidePanelChange, content } =
+	const { handleSidePanelChange, panelID } =
 		React.useContext(SidePanelContext)
 
 	return (
@@ -50,13 +51,13 @@ export const BoxCard: React.FC<BoxCardProps> = ({ id }) => {
 			role="button"
 			tabIndex={0}
 			className="boxcard"
-			onClick={() => handleSidePanelChange(content, "about-me")}
-			onKeyDown={() => handleSidePanelChange(content, "about-me")}
+			onClick={() => handleSidePanelChange(panelID, id)}
+			onKeyDown={() => handleSidePanelChange(panelID, id)}
 		>
 			<img
 				src={currentIcon}
 				alt={currentTitle}
-			></img>
+			/>
 			{currentTitle}
 		</div>
 	)

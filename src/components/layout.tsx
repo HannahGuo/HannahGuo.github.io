@@ -6,7 +6,7 @@ import Floor from "./floor"
 import FloorCase from "./floorcase"
 import Plant from "./plant"
 import Poster from "./poster"
-import { SidePanel } from "./side-panel"
+import { SidePanel } from "./sidepanel"
 
 export const Layout = () => {
 	const [isOpen, setIsOpen] = React.useState(false)
@@ -16,6 +16,7 @@ export const Layout = () => {
 		lastState: SidePanelType,
 		nextState: SidePanelType,
 	) => {
+		console.log({ lastState, nextState })
 		if (lastState === "none") {
 			setIsOpen(true)
 			setContent(nextState)
@@ -26,21 +27,21 @@ export const Layout = () => {
 			setContent("none")
 		}
 
-		if (lastState !== nextState) {
-			setContent(nextState)
-		}
-
 		if (nextState === "none") {
 			setIsOpen(false)
+		}
+
+		if (lastState !== nextState) {
+			setContent(nextState)
 		}
 	}
 
 	return (
 		<div id="holder">
 			<SidePanelContext.Provider
-				value={{ isOpen, handleSidePanelChange, content }}
+				value={{ isOpen, handleSidePanelChange, panelID: content }}
 			>
-				<SidePanel type="about-me" />
+				<SidePanel />
 				<div id="room">
 					<div id="right-room">
 						<div id="right-room-shelf-col-left">
