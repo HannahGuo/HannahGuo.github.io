@@ -1,36 +1,26 @@
 import * as React from "react"
-
-interface SidePanelProps {
-	title: string
-	body: JSX.Element
-}
-
-export const SidePanel = ({ title, body }: SidePanelProps) => {
-	const [isOpen, setIsOpen] = React.useState(true)
-
-	const closeSidePanel = () => {
-		setIsOpen(false)
-	}
-
-	if (!isOpen) {
-		return null
-	}
+import { useContext } from "react"
+import { SidePanelContext, SidePanelType } from "../context/SidePanelContext"
+import "../styles/sidepanel.css"
+export const SidePanel = ({ type }: { type: SidePanelType }) => {
+	const { isOpen, handleSidePanelChange, content } =
+		useContext(SidePanelContext)
 
 	return (
-		<div className="sidePanel">
+		<div
+			className={`sidePanel ${
+				isOpen ? "sidePanel-open" : "sidePanel-closed"
+			}`}
+		>
 			<div className="sidePanel-header">
-				<div className="sidePanel-header-title">{title}</div>
 				<div
 					className="close-sidePanel"
 					role="button"
 					tabIndex={0}
-					onClick={closeSidePanel}
-					onKeyDown={closeSidePanel}
-				>
-					x
-				</div>
+					onClick={() => handleSidePanelChange(content, "none")}
+					onKeyDown={() => handleSidePanelChange(content, "none")}
+				></div>
 			</div>
-			{body}
 		</div>
 	)
 }

@@ -1,6 +1,6 @@
 import * as React from "react"
-import "../styles/poster.css"
 import SVGMe from "../images/undraw_programmer_imem.svg"
+import "../styles/poster.css"
 
 const Poster = () => (
 	<div id="poster">
@@ -10,8 +10,9 @@ const Poster = () => (
 		</div>
 		<img src={SVGMe} alt="Programmer that happens to look like me" />
 		<span id="myName">Hannah Guo</span>
-		<span>
-			Creator of This Site, Daily Iced Latte Drinker, Doer of Things
+		<span id="myTitle">
+			🛠️ Creator of This Site <br /> 🧋 Daily Iced Latte Drinker <br /> 🧙
+			Probably Side Questing
 		</span>
 	</div>
 )

@@ -30,6 +30,7 @@
 	}
 
 	#right-room-shelf-col-left {
+		margin-left: 10em;
 		display: flex;
 		flex-direction: column;
 		justify-content: space-between;

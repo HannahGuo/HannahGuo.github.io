@@ -1,0 +1,16 @@
+.sidePanel {
+    background-color: #E5E5E5;
+    height: 100%;
+    position: absolute;    
+    z-index: 2;
+}
+
+.sidePanel-open {
+    width: 50%;
+    transition: width 0.4s ease-in-out;
+}
+
+.sidePanel-closed {
+    width: 0;
+    transition: width 0.4s ease-in-out;
+}
