@@ -16,7 +16,6 @@ export const Layout = () => {
 		lastState: SidePanelType,
 		nextState: SidePanelType,
 	) => {
-		console.log({ lastState, nextState })
 		if (lastState === "none") {
 			setIsOpen(true)
 			setContent(nextState)
@@ -24,7 +23,9 @@ export const Layout = () => {
 
 		if (lastState === nextState) {
 			setIsOpen(false)
-			setContent("none")
+			setTimeout(() => {
+				setContent("none")
+			}, 500)
 		}
 
 		if (nextState === "none") {

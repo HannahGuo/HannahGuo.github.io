@@ -12,10 +12,10 @@ const FloorShelfTop = () => (
 				link="https://github.com/HannahGuo"
 			/>
 			<IconCircle
-				color="#01579B"
-				icon="devpostIcon"
+				color="#EB5F16"
+				icon="substackIcon"
 				tilt={25}
-				link="https://devpost.com/HannahGuo"
+				link="https://musingfromhannah.substack.com/"
 			/>
 			<IconCircle
 				color="#0076B4"

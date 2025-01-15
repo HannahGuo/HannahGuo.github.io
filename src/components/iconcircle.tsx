@@ -2,25 +2,41 @@ import { OutboundLink } from "gatsby-plugin-google-gtag"
 import * as React from "react"
 import "../styles/iconcircle.css"
 
+type IconString = "githubIcon" | "substackIcon" | "linkedinIcon" | "flickrIcon"
+
 interface IconCircleProps {
 	color: string
-	icon: string
+	icon: IconString
 	tilt: number
 	link: string
+}
+
+function determineIconCircleSize(icon: IconString) {
+	switch (icon) {
+		case "githubIcon":
+			return "103%"
+		case "substackIcon":
+		case "linkedinIcon":
+			return "86%"
+		case "flickrIcon":
+			return "103%"
+		default:
+			return "100%"
+	}
 }
 
 const IconCircle: React.FC<IconCircleProps> = ({ color, icon, tilt, link }) => {
 	let defaultStyle = {
 		backgroundColor: color,
 		backgroundImage: `url("../images/${icon}.png")`,
-		backgroundSize: "103%", // This is big because for some reason theres a border when on GH regular sized
+		backgroundSize: determineIconCircleSize(icon),
 		backgroundPosition: "center",
 		transform: `rotate(${tilt}deg)`,
 	}
 	let hoveredStyle = {
 		backgroundColor: color,
 		backgroundImage: `url("../images/${icon}.png")`,
-		backgroundSize: "103%", // This is big because for some reason theres a border when on GH regular sized
+		backgroundSize: determineIconCircleSize(icon),
 		backgroundPosition: "center",
 		transform: `rotate(0deg)`,
 	}

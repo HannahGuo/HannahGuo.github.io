@@ -34,8 +34,12 @@ export const SidePanel = () => {
 			case "side-quests":
 				return <SideQuestsSidePanel />
 			default:
-				return <div>Panel not found</div>
+				return <div>Unknown Panel</div>
 		}
+	}
+
+	const resetSidePanel = () => {
+		handleSidePanelChange(panelID, "none")
 	}
 
 	return (
@@ -49,8 +53,8 @@ export const SidePanel = () => {
 					className="close-sidePanel"
 					role="button"
 					tabIndex={0}
-					onClick={() => handleSidePanelChange(panelID, "none")}
-					onKeyDown={() => handleSidePanelChange(panelID, "none")}
+					onClick={resetSidePanel}
+					onKeyDown={resetSidePanel}
 				>
 					{choosePanelContent(panelID)}
 				</div>
