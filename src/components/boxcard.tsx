@@ -52,7 +52,6 @@ export const BoxCard: React.FC<BoxCardProps> = ({ id }) => {
 			tabIndex={0}
 			className="boxcard"
 			onClick={() => handleSidePanelChange(panelID, id)}
-			onKeyDown={() => handleSidePanelChange(panelID, id)}
 		>
 			<img
 				src={currentIcon}

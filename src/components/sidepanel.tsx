@@ -4,22 +4,26 @@ import { SidePanelContext, SidePanelType } from "../context/SidePanelContext"
 import "../styles/sidepanel.css"
 
 const AboutMeSidePanel = () => {
-	return <div>About Me</div>
+	return (
+		<div className="sidePanel-content">
+			<h2>About Me</h2>
+		</div>
+	)
 }
 
 const MyProjectsSidePanel = () => {
-	return <div>My Projects</div>
+	return <div className="sidePanel-content">My Projects</div>
 }
 
 const MyWorkSidePanel = () => {
-	return <div>My Work</div>
+	return <div className="sidePanel-content">My Work</div>
 }
 
 const SideQuestsSidePanel = () => {
-	return <div>Side Quests</div>
+	return <div className="sidePanel-content">Side Quests</div>
 }
 
-export const SidePanel = () => {
+export const SidePanel = React.forwardRef<HTMLDivElement>((props, ref) => {
 	const { isOpen, handleSidePanelChange, panelID } =
 		useContext(SidePanelContext)
 
@@ -44,6 +48,7 @@ export const SidePanel = () => {
 
 	return (
 		<div
+			ref={ref}
 			className={`sidePanel ${
 				isOpen ? "sidePanel-open" : "sidePanel-closed"
 			}`}
@@ -54,11 +59,9 @@ export const SidePanel = () => {
 					role="button"
 					tabIndex={0}
 					onClick={resetSidePanel}
-					onKeyDown={resetSidePanel}
-				>
-					{choosePanelContent(panelID)}
-				</div>
+				/>
+				{choosePanelContent(panelID)}
 			</div>
 		</div>
 	)
-}
+})

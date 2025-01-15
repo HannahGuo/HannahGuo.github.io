@@ -8,12 +8,36 @@
     color: black;
 }
 
-.sidePanel-open {
-    width: 50%;
-    transition: width 0.4s ease-in-out;
+@media (min-width: 1001px) {
+	.sidePanel-open {
+        width: 50%;
+        transition: width 0.4s ease-in-out;
+    }    
+}
+
+@media (max-width: 1000px) {
+	.sidePanel-open {
+        width: 100%;
+        transition: width 0.4s ease-in-out;
+    }   
+}
+
+.close-sidePanel {
+    height: 1.2em;
+    width: 1.2em;
+    position: absolute;
+    top: 1.6em;
+    right: 2em;
+    cursor: pointer;
+    background-image: url(../images/close.svg);
+    background-size: contain;
 }
 
 .sidePanel-closed {
     width: 0;
     transition: width 0.4s ease-in-out;
+}
+
+.sidePanel-content {
+    padding: 3em;
 }

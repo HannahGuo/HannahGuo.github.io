@@ -1,4 +1,5 @@
 import * as React from "react"
+import { useEffect, useRef } from "react"
 import { SidePanelContext, SidePanelType } from "../context/SidePanelContext"
 import "../styles/layout.css"
 import Bookshelf from "./bookshelf"
@@ -10,39 +11,57 @@ import { SidePanel } from "./sidepanel"
 
 export const Layout = () => {
 	const [isOpen, setIsOpen] = React.useState(false)
+	const [isClosing, setIsClosing] = React.useState(false)
 	const [content, setContent] = React.useState<SidePanelType>("none")
+
+	const sidePanelRef = useRef<HTMLDivElement>(null)
 
 	const handleSidePanelChange = (
 		lastState: SidePanelType,
 		nextState: SidePanelType,
 	) => {
 		if (lastState === "none") {
+			// Opening from closed
 			setIsOpen(true)
 			setContent(nextState)
-		}
-
-		if (lastState === nextState) {
+		} else if (nextState === "none") {
+			// Closing from open
 			setIsOpen(false)
-			setTimeout(() => {
-				setContent("none")
-			}, 500)
-		}
-
-		if (nextState === "none") {
-			setIsOpen(false)
-		}
-
-		if (lastState !== nextState) {
+			setIsClosing(true)
+		} else if (lastState !== nextState) {
+			// Switching content
 			setContent(nextState)
+		} else if (lastState === nextState) {
+			// Closing from toggle
+			setIsClosing(true)
+			setIsOpen(false)
 		}
 	}
+
+	useEffect(() => {
+		const sidePanelNode = sidePanelRef.current
+
+		if (!sidePanelNode) return
+
+		const onTransitionEnd = (_: TransitionEvent) => {
+			if (isClosing) {
+				setContent("none")
+				setIsClosing(false)
+			}
+		}
+
+		sidePanelNode.addEventListener("transitionend", onTransitionEnd)
+		return () => {
+			sidePanelNode.removeEventListener("transitionend", onTransitionEnd)
+		}
+	}, [isClosing])
 
 	return (
 		<div id="holder">
 			<SidePanelContext.Provider
 				value={{ isOpen, handleSidePanelChange, panelID: content }}
 			>
-				<SidePanel />
+				<SidePanel ref={sidePanelRef} />
 				<div id="room">
 					<div id="right-room">
 						<div id="right-room-shelf-col-left">
