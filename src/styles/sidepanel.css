@@ -41,3 +41,46 @@
 .sidePanel-content {
     padding: 3em;
 }
+
+.sidePanel-content span{
+    display: block;
+    margin-top: 1.2em;
+    margin-bottom: 1.2em;
+}
+
+.sidePanel-content .list-indent{
+    margin-left: 2em;
+}
+
+.outboundLink {
+    font-weight: 900;
+}
+
+.pfp { 
+    height: 200px;
+    object-fit: cover;
+    margin: 0 auto;
+    display: block;
+}
+
+.pfpNotion {
+    height: 200px;
+    object-fit: cover;
+    margin: 0 auto;
+    display: block;
+}
+
+#pfpSwitcher {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    column-gap: 1em;
+    margin-top: 1em;
+}
+
+.sidePanel-content-divider {
+    border-top: 1px groove black;
+    width: 10em;
+    display: block;
+    margin: 1.4em auto;
+}

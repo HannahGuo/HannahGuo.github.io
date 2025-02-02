@@ -12,7 +12,6 @@ const FloorCase = () => (
 		<div id="se-webring-logo">
 			<OutboundLink
 				target="_blank"
-				rel="noreferrer"
 				href="https://se-webring.xyz/"
 			>
 				<img

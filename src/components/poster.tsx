@@ -15,7 +15,7 @@ const Poster = () => (
 		<span id="myName">Hannah Guo</span>
 		<span id="myTitle">
 			🛠️ Creator of This Site <br /> 🧋 Daily Iced Latte Drinker <br /> 🧙
-			Probably Side Questing
+			Probably Sidequesting
 		</span>
 	</div>
 )

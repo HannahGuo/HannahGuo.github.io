@@ -9,7 +9,6 @@ export const Emailbox = () => (
 			<div id="emailbox-slot" />
 			<OutboundLink
 				target="_blank"
-				rel="noreferrer"
 				href="https://mailhide.io/e/tXYU7XHq"
 			>
 				<div id="emailbox-center">

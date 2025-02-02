@@ -55,7 +55,6 @@ const IconCircle: React.FC<IconCircleProps> = ({ color, icon, tilt, link }) => {
 		<OutboundLink
 			href={`${link}`}
 			target="_blank"
-			rel="noopener noreferrer"
 		>
 			<div
 				style={currentStyle}
