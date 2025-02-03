@@ -1,7 +1,7 @@
 #poster {
 	background-color: #f2f2f2;
 	width: 24em;
-	height: 15.4em;
+	height: 18em;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
@@ -40,4 +40,8 @@
 	background-color: #191f41;
 	width: 0.8em;
 	height: 0.8em;
+}
+
+#myTitle {
+	text-align: center;
 }

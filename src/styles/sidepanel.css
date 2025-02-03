@@ -1,0 +1,132 @@
+.sidePanel {
+    background-color: #E5E5E5;
+    height: calc(100% - 2em);
+    position: absolute;    
+    z-index: 2;
+    top: 0;
+    overflow-x: hidden;
+    color: black;
+}
+
+@media (min-width: 1001px) {
+	.sidePanel-open {
+        width: 50%;
+        transition: width 0.3s ease-in-out;
+    }    
+}
+
+@media (max-width: 1000px) {
+	.sidePanel-open {
+        width: 100%;
+        transition: width 0.3s ease-in-out;
+    }   
+}
+
+.sidePanel-closed {
+    width: 0;
+    transition: width 0.3s ease-in-out;
+}
+
+.close-sidePanel {
+    height: 1.2em;
+    width: 1.2em;
+    position: absolute;
+    top: 1.6em;
+    right: 2em;
+    cursor: pointer;
+    background-image: url(../images/close.svg);
+    background-size: contain;
+}
+
+.sidePanel-content {
+    padding: 3em;
+}
+
+.sidePanel-content span{
+    display: block;
+    margin-top: 1.2em;
+    margin-bottom: 1.2em;
+}
+
+.sidePanel-content .list-indent{
+    margin-left: 2em;
+}
+
+.outboundLink {
+    font-weight: 900;
+}
+
+.pfp { 
+    height: 200px;
+    object-fit: cover;
+    margin: 0 auto;
+    display: block;
+}
+
+.pfpNotion {
+    height: 200px;
+    object-fit: cover;
+    margin: 0 auto;
+    display: block;
+}
+
+#pfpSwitcher {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    column-gap: 1em;
+    margin-top: 1em;
+}
+
+.sidePanel-content-divider {
+    border-top: 1px groove black;
+    width: 10em;
+    display: block;
+    margin: 1.4em auto;
+}
+
+h3 {
+    font-size: 1.2em;
+    font-weight: 900;
+    margin-top: 1.2em;
+}
+
+.substack-post-embed {
+    max-width: 90%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    display: flex;  
+    border-radius: 1em;
+    width: 200px;
+}
+
+.substack-frame {
+    border: none; 
+    display: block; 
+    height: 700px; 
+    flex-grow: 1;
+}
+
+.project-embed { 
+    display: block;
+    margin: 0 auto;
+    max-width: 600px;
+}
+
+@media (min-width: 1001px) {
+	#rankedRecordsImage, #arrowbicsImage {
+        display: block;
+        margin: 0 auto;
+        width: 600px;
+        height: auto;
+    }  
+}
+
+@media (max-width: 1000px) {
+	#rankedRecordsImage, #arrowbicsImage {
+        display: block;
+        margin: 0 auto;
+        width: 300px;
+        height: auto;
+    }
+}

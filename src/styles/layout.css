@@ -1,6 +1,6 @@
 #room {
-	height: 92%;
 	width: 100%;
+	height: 92%;
 	display: flex;
 	bottom: 0;
 }
@@ -30,6 +30,7 @@
 	}
 
 	#right-room-shelf-col-left {
+		margin-left: 10em;
 		display: flex;
 		flex-direction: column;
 		justify-content: space-between;

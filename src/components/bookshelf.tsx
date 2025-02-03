@@ -1,6 +1,7 @@
 import * as React from "react"
-import Book from "./book"
+import { SidePanelType } from "../context/SidePanelContext"
 import "../styles/bookshelf.css"
+import Book from "./book"
 import { BoxCard } from "./boxcard"
 
 interface Book {
@@ -12,14 +13,14 @@ interface Book {
 interface BookshelfProps {
 	books: Book[]
 	boxCardPos: number
-	boxTheme: string
+	boxId: SidePanelType
 	shelfWidth: string
 }
 
 const Bookshelf: React.FC<BookshelfProps> = ({
 	books,
 	boxCardPos,
-	boxTheme,
+	boxId,
 	shelfWidth,
 }) => {
 	let shelfContent = []
@@ -28,7 +29,12 @@ const Bookshelf: React.FC<BookshelfProps> = ({
 
 	while (index < books.length) {
 		if (index === boxCardPos && !hasAddedBox) {
-			shelfContent.push(<BoxCard key={boxTheme} boxTheme={boxTheme} />)
+			shelfContent.push(
+				<BoxCard
+					key={"box" + boxId}
+					id={boxId}
+				/>,
+			)
 			hasAddedBox = true
 			continue
 		} else {
@@ -46,9 +52,12 @@ const Bookshelf: React.FC<BookshelfProps> = ({
 
 	return (
 		<>
-			<div className="bookshelf" style={{ width: shelfWidth }}>
+			<div
+				className="bookshelf"
+				style={{ width: shelfWidth }}
+			>
 				<div className="books">{shelfContent}</div>
-				<div className="shelf"></div>
+				<div className="shelf" />
 			</div>
 		</>
 	)

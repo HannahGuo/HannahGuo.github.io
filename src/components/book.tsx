@@ -13,7 +13,12 @@ const Book: React.FC<BookProps> = ({ width, height, backgroundColor }) => {
 		backgroundColor: backgroundColor,
 	}
 
-	return <div style={defaultStyle} className="book" />
+	return (
+		<div
+			style={defaultStyle}
+			className="book"
+		/>
+	)
 }
 
 export default Book

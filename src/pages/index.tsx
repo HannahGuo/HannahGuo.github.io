@@ -1,6 +1,6 @@
+import "@fontsource/quattrocento-sans"
 import * as React from "react"
 import { Layout } from "../components/layout"
-import "@fontsource/quattrocento-sans"
 import { Seo } from "../components/seo"
 // import ImageSEO from "../images/pfp3.jpg"
 
@@ -18,12 +18,10 @@ const Head = () => (
 )
 
 const IndexPage = () => (
-	<>
-		<span data-nosnippet>
-			<Head />
-			<Layout></Layout>
-		</span>
-	</>
+	<span data-nosnippet>
+		<Head />
+		<Layout />
+	</span>
 )
 
 export default IndexPage
