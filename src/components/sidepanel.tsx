@@ -35,6 +35,11 @@ const CurrentSideQuests: React.FC<CurrentSideQuestsProps> = ({
 						lemon juice, chili powder, and grated cheese.
 					</span>
 					<span className="list-indent">
+						🪜 I'm in the early stages of translating a diary piece
+						into a short interactive online story.
+					</span>
+
+					<span className="list-indent">
 						💻 I'm doing web development for{" "}
 						<OutboundLink
 							target="_blank"
@@ -131,14 +136,19 @@ const AboutMeSidePanel = () => {
 			</span>
 			<CurrentSideQuests forHome={true} />
 			<span>
-				When I don't have pressing deadlines, you can find me
-				sidequesting. Most commonly, I'll be crocheting, bouldering,
-				writing, or meandering around a city.
+				Professionally, I'll be returning to Notion as a SWE later this
+				year, where I formally interned. I’m super excited to work on
+				redefining software tools on the Internet - learn more about us{" "}
+				<OutboundLink
+					target="_blank"
+					href="https://www.notion.so/about"
+				>
+					here
+				</OutboundLink>
+				!
 			</span>
 			<span>
-				Professionally, I'll be returning to Notion as a SWE later this
-				year, where I formally interned. Previous to that, I also
-				interned at Figma and Stripe (x2).
+				Previous to that, I also interned at Figma and Stripe (x2).
 			</span>
 		</div>
 	)
