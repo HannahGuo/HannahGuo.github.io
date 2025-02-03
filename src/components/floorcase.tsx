@@ -17,7 +17,7 @@ const FloorCase = () => (
 				<img
 					src={WebringIcon}
 					alt="SE Webring Icon"
-				></img>
+				/>
 			</OutboundLink>
 		</div>
 	</div>
