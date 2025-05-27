@@ -65,6 +65,13 @@ const CurrentSideQuests: React.FC<CurrentSideQuestsProps> = ({
 						have been inspired from a recipe I saw in a café in
 						Toronto.
 					</span>
+					<span className="list-indent">
+						🤖 I got over a 6-year-long fear, and refereed at the{" "}
+						<a href="https://www.thebluealliance.com/event/2025onwat">
+							FIRST Robotics Competition University of Waterloo
+						</a>
+						. I'm going to miss the Ontario FRC scene.
+					</span>
 				</>
 			)}
 			<span className="list-indent">
