@@ -22,48 +22,58 @@ const CurrentSideQuests: React.FC<CurrentSideQuestsProps> = ({
 			{!forHome && (
 				<>
 					<span className="list-indent">
-						🧶 I'm crocheting bolero sleeves.
+						✈️ After finishing my degree, I'm traveling! I visited
+						Japan in the spring, and I'll be heading to Europe in
+						the summer.
 					</span>
 					<span className="list-indent">
-						🪡 I'm learning how to needle-felt by making a chicken.
+						🏃‍♀️
+						<span
+							style={{
+								textDecoration: "line-through",
+								display: "inline-block",
+								margin: "auto",
+							}}
+						>
+							I'm training for a 5K.
+						</span>{" "}
+						I ran my first 5K in Brooklyn, NY, two days after
+						finishing two finals in Waterloo on the same day that
+						wrapped up my degree. Super fun, training for the next
+						one.
 					</span>
 					<span className="list-indent">
-						⛸️ I'm trying to do backwards crossovers and lunges
-						while skating.
+						💸 I spent quite a bit of time during my final
+						university term taking an interest in event organizing,
+						logistics and finances as the VP Finance for the{" "}
+						<OutboundLink
+							href="https://www.instagram.com/uwsesoc/"
+							target="_blank"
+							className="outboundLink"
+						>
+							Software Engineering Society
+						</OutboundLink>
+						. I managed a few thousand dollars throughout the term
+						spanning across a handful of events and initiatives,
+						including a Powerpoint Night and our flagship
+						Coffeehouse talent show.
 					</span>
 					<span className="list-indent">
 						🥑 I'm experimenting with toppings to add to avocado
 						toast. Lately it's been a combination of olive oil,
-						lemon juice, chili powder, and grated cheese.
-					</span>
-					<span className="list-indent">
-						🪜 I'm in the early stages of translating a diary piece
-						into a short interactive online story.
-					</span>
-					<span className="list-indent">
-						💻 I'm doing web development for{" "}
-						<OutboundLink
-							target="_blank"
-							href="https://www.uwwistem.com/"
-							className="outboundLink"
-						>
-							UW WiSTEM
-						</OutboundLink>
-						{" and "}
-						<OutboundLink
-							target="_blank"
-							href="https://www.instagram.com/uw_ux/"
-							className="outboundLink"
-						>
-							UW/UX
-						</OutboundLink>
-						.
+						lemon juice, chili powder, and grated cheese. This might
+						have been inspired from a recipe I saw in a café in
+						Toronto.
 					</span>
 				</>
 			)}
 			<span className="list-indent">
-				🧋 {!forHome ? "I'm building a" : "My latest code project is"} a
-				boba discount tracker for Waterloo,{" "}
+				🎓 I'm leading a wonderful team to build our university program
+				cohort's class profile, which will be releasing in Summer 2025.
+				This is my current obsession.
+			</span>
+			<span className="list-indent">
+				🧋 I'm working on a boba discount tracker,{" "}
 				<OutboundLink
 					target="_blank"
 					href="https://so-boba-after.web.app/"
@@ -71,23 +81,8 @@ const CurrentSideQuests: React.FC<CurrentSideQuestsProps> = ({
 				>
 					...so, boba after?
 				</OutboundLink>
-			</span>
-			<span className="list-indent">
-				💸 I've recently taken an interest in event organizing,
-				logistics and finances, and am the VP Finance for the{" "}
-				<OutboundLink
-					href="https://www.instagram.com/uwsesoc/"
-					target="_blank"
-					className="outboundLink"
-				>
-					Software Engineering Society
-				</OutboundLink>{" "}
-				at Waterloo this winter.
-			</span>
-			<span className="list-indent">
-				🎓 Finally, I'm leading a wonderful team to build our university
-				program cohort's class profile, which will be releasing in April
-				2025.
+				, that is currently hyperoptimized for Waterloo but that I'd
+				like to make global.
 			</span>
 		</>
 	)
@@ -178,7 +173,7 @@ const MyProjectsSidePanel = () => {
 				>
 					...so, boba after?
 				</OutboundLink>{" "}
-				| 2024
+				| 2024, 2025
 			</h3>
 			<span>
 				A boba discount tracker (for Waterloo specifically), inspired by
@@ -208,8 +203,8 @@ const MyProjectsSidePanel = () => {
 			</h3>
 			<span>
 				A web tool that generates Spotify playlists with all an artist's
-				songs - with various sort methods and filters. It also allows
-				you to to include multiple artists on the same playlist.
+				songs - with various sort methods and filters. It also lets you
+				to include multiple artists on the same playlist.
 			</span>
 			<span>
 				It still receives hundreds of users per year from around the
@@ -260,9 +255,11 @@ const MyWorkSidePanel = () => {
 		<div className="sidePanel-content">
 			<h2>My Work</h2>
 			<span>
-				My resume is the place to go to for the technical overview and
-				impact of my internships - I wanted this to be a place to share
-				a subset of other things I did during these times.
+				My <a href="/HannahGuoResume.pdf">resume</a> (assuming I
+				remembered to update it) is the place to go to for the technical
+				overview and impact of my internships - I wanted this to be a
+				place to share a subset of other things I did during these
+				times.
 			</span>
 			<div className="sidePanel-content-divider" />
 			<h3>Notion | May 2024 - August 2024</h3>
@@ -331,12 +328,8 @@ const SideQuestsSidePanel = () => {
 	return (
 		<div className="sidePanel-content">
 			<h2>Side Quests</h2>
-			<span>
-				My main quest tends to be either academics or work, and I define
-				a side quest as "things I'm working on apart from my main
-				quest".
-			</span>
-			<span>As of February 2025:</span>
+			<span>Other fun things I've done, apart from work and school.</span>
+			<span>In 2025:</span>
 			<CurrentSideQuests forHome={false} />
 		</div>
 	)
