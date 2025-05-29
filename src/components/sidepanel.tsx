@@ -142,8 +142,9 @@ const AboutMeSidePanel = () => {
 			<CurrentSideQuests forHome={true} />
 			<span>
 				Professionally, I'll be returning to Notion as a SWE later this
-				year, where I formally interned. I’m super excited to work on
-				redefining software tools on the Internet - learn more about us{" "}
+				year, where I formally interned during Summer 2024. I’m super
+				excited to work on redefining software tools on the Internet -
+				learn more about us{" "}
 				<OutboundLink
 					target="_blank"
 					href="https://www.notion.so/about"
@@ -154,7 +155,8 @@ const AboutMeSidePanel = () => {
 				!
 			</span>
 			<span>
-				Previous to that, I also interned at Figma and Stripe (x2).
+				Previous to that, I also interned at Figma (Winter 2024), and
+				Stripe (Winter 2022 and Summer 2023).
 			</span>
 		</div>
 	)
