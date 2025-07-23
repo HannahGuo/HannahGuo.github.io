@@ -22,9 +22,17 @@ const CurrentSideQuests: React.FC<CurrentSideQuestsProps> = ({
 			{!forHome && (
 				<>
 					<span className="list-indent">
-						✈️ After finishing my degree, I'm traveling! I visited
-						Japan in the spring, and I'll be heading to Europe in
-						the summer.
+						✈️ After finishing my degree, I traveled! I visited
+						Japan in the spring, and I went around Europe in the
+						summer. I wrote a pretty fun (I think){" "}
+						<OutboundLink
+							href="https://musingfromhannah.substack.com/p/birds-i-saw-while-traveling-europe"
+							target="_blank"
+							className="outboundLink"
+						>
+							blog post
+						</OutboundLink>{" "}
+						about all the birds I saw on my trip.
 					</span>
 					<span className="list-indent">
 						🏃‍♀️
@@ -67,17 +75,29 @@ const CurrentSideQuests: React.FC<CurrentSideQuestsProps> = ({
 					</span>
 					<span className="list-indent">
 						🤖 I got over a 6-year-long fear, and refereed at the{" "}
-						<a href="https://www.thebluealliance.com/event/2025onwat">
+						<OutboundLink
+							target="_blank"
+							href="https://www.thebluealliance.com/event/2025onwat"
+							className="outboundLink"
+						>
 							FIRST Robotics Competition University of Waterloo
-						</a>
+						</OutboundLink>
 						. I'm going to miss the Ontario FRC scene.
 					</span>
 				</>
 			)}
 			<span className="list-indent">
-				🎓 I'm leading a wonderful team to build our university program
-				cohort's class profile, which will be releasing in Summer 2025.
-				This is my current obsession.
+				🎓 Earlier this year, I led a wonderful team in building our{" "}
+				<OutboundLink
+					target="_blank"
+					href="https://sexxv.github.io/classprofile/"
+					className="outboundLink"
+				>
+					our university program cohort's class profile
+				</OutboundLink>
+				. This was an effort that spanned over six months and several
+				countries - there was a lot of work done by our whole team to
+				make it as special as it is. I'm really really proud of it.
 			</span>
 			<span className="list-indent">
 				🧋 I'm working on a boba discount tracker,{" "}
@@ -132,19 +152,8 @@ const AboutMeSidePanel = () => {
 			<div className="sidePanel-content-divider" />
 			<span>👋 Hi, I'm Hannah!</span>
 			<span>
-				I'm currently a 4th year Software Engineering student at the
-				University of Waterloo.
-			</span>
-			<span>
-				I like working on long-lasting high-impact projects (both with
-				code and without) and learning along the way.
-			</span>
-			<CurrentSideQuests forHome={true} />
-			<span>
-				Professionally, I'll be returning to Notion as a SWE later this
-				year, where I formally interned during Summer 2024. I’m super
-				excited to work on redefining software tools on the Internet -
-				learn more about us{" "}
+				I'm currently a software engineer at Notion where I work on
+				streamlining collaboration. Learn more about us{" "}
 				<OutboundLink
 					target="_blank"
 					href="https://www.notion.so/about"
@@ -155,8 +164,14 @@ const AboutMeSidePanel = () => {
 				!
 			</span>
 			<span>
-				Previous to that, I also interned at Figma (Winter 2024), and
-				Stripe (Winter 2022 and Summer 2023).
+				I like working on long-lasting high-impact projects (both with
+				code and without) and learning along the way.
+			</span>
+			<CurrentSideQuests forHome={true} />
+			<span>
+				I graduated from Software Engineering at the University of
+				Waterloo. I also interned at Notion (Summer 2024), Figma (Winter
+				2024), and Stripe (Winter 2022 and Summer 2023).
 			</span>
 		</div>
 	)
@@ -337,7 +352,10 @@ const SideQuestsSidePanel = () => {
 	return (
 		<div className="sidePanel-content">
 			<h2>Side Quests</h2>
-			<span>Other fun things I've done, apart from work and school.</span>
+			<span>
+				Some of the other fun things I've done, apart from work and
+				academics.
+			</span>
 			<span>In 2025:</span>
 			<CurrentSideQuests forHome={false} />
 		</div>
